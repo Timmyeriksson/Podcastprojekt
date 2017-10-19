@@ -16,6 +16,7 @@ namespace Presentation
     public partial class MainWindow : Form
     {
         Category cat = new Category();
+        Feed feed = new Feed();
 
         public MainWindow()
         {
@@ -25,26 +26,31 @@ namespace Presentation
 
         private void btn_delete_category_Click(object sender, EventArgs e)
         {
-            var folderToDelete = lb_category.SelectedItem.ToString();
-            cat.remove(folderToDelete);
+            if (Validation.listBoxNotEmpty(lb_category))
+            {
+                var confirm = MessageBox.Show("Do you want to delete the category?", "Delete Category", MessageBoxButtons.YesNo);
 
-            lb_category.Items.Clear();
-            cb_category.Items.Clear();
-            fillCategoryList();
+                if (confirm == DialogResult.Yes)
+                {
+                    var folderToDelete = lb_category.SelectedItem.ToString();
+                    feed.remove(folderToDelete);
+                    lb_category.Items.Clear();
+                    cb_category.Items.Clear();
+                    fillCategoryList();
+                }
+            }
         }
-
-
-
-
-        
 
         private void btn_add_category_Click(object sender, EventArgs e)
         {
-            lb_category.Items.Clear();
-            cb_category.Items.Clear();
-            var categoryName = txtBox_new_category.Text;
-            cat.newFolder(categoryName);
-            fillCategoryList();
+            if (Validation.tfNotEmpty(txtBox_new_category, "Category field "))
+            {
+                lb_category.Items.Clear();
+                cb_category.Items.Clear();
+                var categoryName = txtBox_new_category.Text;
+                cat.newFolder(categoryName);
+                fillCategoryList();
+            }
         }
 
         public void fillCategoryList()

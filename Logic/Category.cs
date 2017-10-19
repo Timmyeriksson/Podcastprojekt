@@ -16,13 +16,5 @@ namespace Logic
         {
             rss.newFolder(category);
         }
-
-        public void remove(string category)
-        {
-            string path = Directory.GetCurrentDirectory() + @"\categories\" + category;
-
-            Directory.Delete(path, true);
-        }
-
     }
 }

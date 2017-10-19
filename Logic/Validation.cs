@@ -13,7 +13,7 @@ namespace Logic
         {
             if (field.Text == "")
             {
-                MessageBox.Show(label + label + "is a required field. Please enter a value before continuing.");
+                MessageBox.Show(label + "is a required field. Please enter a value before continuing.");
                 field.Focus();
                 return false;
             }

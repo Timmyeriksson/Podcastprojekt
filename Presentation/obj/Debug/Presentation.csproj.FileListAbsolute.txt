@@ -23,3 +23,5 @@ C:\Users\Timmy\Documents\GitHub\Podcastprojekt\Presentation\obj\Debug\Presentati
 C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Presentation\bin\Debug\Logic.pdb
 C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Presentation\bin\Debug\Data.dll
 C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Presentation\bin\Debug\Data.pdb
+C:\Users\Timmy\Documents\GitHub\Podcastprojekt\Presentation\bin\Debug\Data.dll
+C:\Users\Timmy\Documents\GitHub\Podcastprojekt\Presentation\bin\Debug\Data.pdb
