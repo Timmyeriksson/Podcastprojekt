@@ -63,13 +63,13 @@ namespace Logic
         }
         public static bool intervalBoxNotEmpty(ComboBox cb, ListBox list)
         {
-            if(cb.Text == "")
+            if (cb.Text == "")
             {
                 MessageBox.Show("Please choose an update interval.");
                 cb.Focus();
                 return false;
             }
-            else if(cb.SelectedItem == list.SelectedItem)
+            else if (cb.SelectedItem == list.SelectedItem)
             {
                 MessageBox.Show("The chosen update interval is already selected for the podcast");
                 cb.Focus();
@@ -77,7 +77,7 @@ namespace Logic
             }
             else
             {
-                return true; 
+                return true;
             }
         }
 
