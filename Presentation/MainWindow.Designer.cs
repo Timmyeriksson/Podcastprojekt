@@ -35,7 +35,7 @@
             this.btn_add_podcast = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtBox_new_category = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.lb_category = new System.Windows.Forms.ListBox();
@@ -52,7 +52,7 @@
             this.lbl_update_interval = new System.Windows.Forms.Label();
             this.lbl_select_category = new System.Windows.Forms.Label();
             this.lbl_podcast_name = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_category = new System.Windows.Forms.ComboBox();
             this.btn_edit_category = new System.Windows.Forms.Button();
             this.btn_add_category = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -65,6 +65,7 @@
             this.btn_delete_category.TabIndex = 0;
             this.btn_delete_category.Text = "Delete category";
             this.btn_delete_category.UseVisualStyleBackColor = true;
+            this.btn_delete_category.Click += new System.EventHandler(this.btn_delete_category_Click);
             // 
             // btn_delete_podcast
             // 
@@ -116,12 +117,12 @@
             this.textBox2.Size = new System.Drawing.Size(121, 20);
             this.textBox2.TabIndex = 6;
             // 
-            // textBox3
+            // txtBox_new_category
             // 
-            this.textBox3.Location = new System.Drawing.Point(775, 144);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 20);
-            this.textBox3.TabIndex = 7;
+            this.txtBox_new_category.Location = new System.Drawing.Point(775, 144);
+            this.txtBox_new_category.Name = "txtBox_new_category";
+            this.txtBox_new_category.Size = new System.Drawing.Size(121, 20);
+            this.txtBox_new_category.TabIndex = 7;
             // 
             // textBox4
             // 
@@ -169,7 +170,6 @@
             this.lbl_categories.Size = new System.Drawing.Size(57, 13);
             this.lbl_categories.TabIndex = 14;
             this.lbl_categories.Text = "Categories";
-            this.lbl_categories.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbl_podcast
             // 
@@ -260,13 +260,13 @@
             this.lbl_podcast_name.TabIndex = 24;
             this.lbl_podcast_name.Text = "Podcast name";
             // 
-            // comboBox1
+            // cb_category
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(775, 238);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 25;
+            this.cb_category.FormattingEnabled = true;
+            this.cb_category.Location = new System.Drawing.Point(775, 238);
+            this.cb_category.Name = "cb_category";
+            this.cb_category.Size = new System.Drawing.Size(121, 21);
+            this.cb_category.TabIndex = 25;
             // 
             // btn_edit_category
             // 
@@ -285,6 +285,7 @@
             this.btn_add_category.TabIndex = 27;
             this.btn_add_category.Text = "Add category";
             this.btn_add_category.UseVisualStyleBackColor = true;
+            this.btn_add_category.Click += new System.EventHandler(this.btn_add_category_Click);
             // 
             // MainWindow
             // 
@@ -293,7 +294,7 @@
             this.ClientSize = new System.Drawing.Size(990, 486);
             this.Controls.Add(this.btn_add_category);
             this.Controls.Add(this.btn_edit_category);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cb_category);
             this.Controls.Add(this.lbl_podcast_name);
             this.Controls.Add(this.lbl_select_category);
             this.Controls.Add(this.lbl_update_interval);
@@ -310,7 +311,7 @@
             this.Controls.Add(this.lb_category);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtBox_new_category);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_add_podcast);
@@ -334,7 +335,7 @@
         private System.Windows.Forms.Button btn_add_podcast;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtBox_new_category;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.ListBox lb_category;
@@ -351,7 +352,7 @@
         private System.Windows.Forms.Label lbl_update_interval;
         private System.Windows.Forms.Label lbl_select_category;
         private System.Windows.Forms.Label lbl_podcast_name;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_category;
         private System.Windows.Forms.Button btn_edit_category;
         private System.Windows.Forms.Button btn_add_category;
     }
