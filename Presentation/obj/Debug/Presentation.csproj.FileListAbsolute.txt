@@ -1,0 +1,10 @@
+C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Presentation\obj\Debug\Presentation.MainWindow.resources
+C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Presentation\obj\Debug\Presentation.Properties.Resources.resources
+C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Presentation\obj\Debug\Presentation.csproj.GenerateResource.Cache
+C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Presentation\bin\Debug\Presentation.exe.config
+C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Presentation\bin\Debug\Presentation.exe
+C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Presentation\bin\Debug\Presentation.pdb
+C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Presentation\bin\Debug\Logic.dll
+C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Presentation\obj\Debug\Presentation.csprojResolveAssemblyReference.cache
+C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Presentation\obj\Debug\Presentation.exe
+C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Presentation\obj\Debug\Presentation.pdb
