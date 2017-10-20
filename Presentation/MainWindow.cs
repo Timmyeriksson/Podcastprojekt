@@ -73,15 +73,16 @@ namespace Presentation
         { 
             var podName = txtBox_new_pod.Text;
             var url = txtBox_url.Text;
+
             var category = cb_category.SelectedItem.ToString();
             var interval = txtBox_interval.Text;
             int number;
             bool result = Int32.TryParse(interval, out number);
-            if(result)
+            if (result)
             {
                 pod.podInfo(podName, url, category, number);
-            } 
-
+            }
+            
         } 
     }
 }

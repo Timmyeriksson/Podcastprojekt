@@ -9,7 +9,7 @@ namespace Data
 {
     public abstract class AbstractRssReader
     {
-        public void readRSS()
+        public string readRSS(string url)
         {
             var xml = "";
 
@@ -19,11 +19,13 @@ namespace Data
                 xml = client.DownloadString("http://alexosigge.libsyn.com/rss");
             }
 
-            var newXmlDoc = new System.Xml.XmlDocument();
+            var newXmlDoc = new XmlDocument();
             newXmlDoc.LoadXml(xml);
 
             string path = "C:\\test.xml";
             XmlTextWriter writer = new XmlTextWriter(path, null);
+
+            return url;
         }
 
     }

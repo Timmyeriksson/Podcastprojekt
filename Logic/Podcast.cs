@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Data;
 
 namespace Logic
 {
@@ -20,6 +21,8 @@ namespace Logic
             this.url = url;
             this.category = category;
             this.interval = interval;
+
+
         } 
     }
 }
