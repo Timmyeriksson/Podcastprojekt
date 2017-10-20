@@ -23,6 +23,7 @@ namespace Presentation
         {
             InitializeComponent();
             FillCategoryList();
+            fillIntervalList();
         }
 
         private void btn_delete_category_Click(object sender, EventArgs e)
@@ -44,7 +45,7 @@ namespace Presentation
 
         private void btn_add_category_Click(object sender, EventArgs e)
         {
-            if (Validation.tfNotEmpty(txtBox_new_category, "Category field "))
+            if (Validation.tfNotEmpty(txtBox_new_category, "New category "))
             {
                 lb_category.Items.Clear();
                 cb_category.Items.Clear();
@@ -56,33 +57,56 @@ namespace Presentation
 
         public void FillCategoryList()
         {
-            string[] catArray = Directory.GetDirectories(Directory.GetCurrentDirectory() + @"\categories");
-
-            foreach (String cat in catArray)
+            try
             {
-                string[] trimmedCat = cat.Split('\\');
-                int length = trimmedCat.Length - 1;
-                string fixedCat = trimmedCat[length];
-                lb_category.Items.Add(fixedCat);
-                cb_category.Items.Add(fixedCat);
+                string[] catArray = Directory.GetDirectories(Directory.GetCurrentDirectory() + @"\categories");
+
+                foreach (String cat in catArray)
+                {
+                    string[] trimmedCat = cat.Split('\\');
+                    int length = trimmedCat.Length - 1;
+                    string fixedCat = trimmedCat[length];
+                    lb_category.Items.Add(fixedCat);
+                    cb_category.Items.Add(fixedCat);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
             }
         }
 
-        
-        private void btn_add_podcast_Click(object sender, EventArgs e)
-        { 
-            var podName = txtBox_new_pod.Text;
-            var url = txtBox_url.Text;
-
-            var category = cb_category.SelectedItem.ToString();
-            var interval = txtBox_interval.Text;
-            int number;
-            bool result = Int32.TryParse(interval, out number);
-            if (result)
+        public void fillIntervalList()
+        {
+            try
             {
-                pod.PodInfo(podName, url, category, number);
+                cb_interval.Items.Add("2000");
+                cb_interval.Items.Add("5000");
+                cb_interval.Items.Add("10000");
+                cb_interval.Items.Add("300000");
             }
-            
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+        }
+
+
+        private void btn_add_podcast_Click(object sender, EventArgs e)
+        {
+            if(Validation.tfNotEmpty(txtBox_new_pod, "Podcast name ") && Validation.tfNotEmpty(txtBox_url, "URL ") && Validation.categoryBoxNotEmpty(cb_category, lb_category) && Validation.intervalBoxNotEmpty(cb_interval, lb_podcast))
+            {
+                var podName = txtBox_new_pod.Text;
+                var url = txtBox_url.Text;
+                var category = cb_category.SelectedItem.ToString();
+                var interval = cb_interval.SelectedItem.ToString();
+                int number;
+                bool result = Int32.TryParse(interval, out number);
+                if (result)
+                {
+                    pod.PodInfo(podName, url, category, number);
+                }
+            }            
         } 
     }
 }
