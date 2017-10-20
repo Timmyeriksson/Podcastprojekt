@@ -8,7 +8,7 @@ using System.Xml;
 
 namespace Data
 {
-    public class RssGetter
+    public class CategorySaver
     {
         public bool newFolder(string category)
         {

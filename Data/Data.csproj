@@ -40,9 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Podcasts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RssGetter.cs" />
+    <Compile Include="CategorySaver.cs" />
+    <Compile Include="RssReader.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

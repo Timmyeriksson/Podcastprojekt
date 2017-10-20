@@ -6,6 +6,5 @@ C:\Users\Timmy\Documents\GitHub\Podcastprojekt\Data\obj\Debug\Data.dll
 C:\Users\Timmy\Documents\GitHub\Podcastprojekt\Data\obj\Debug\Data.pdb
 C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Data\bin\Debug\Data.dll
 C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Data\bin\Debug\Data.pdb
-C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
 C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Data\obj\Debug\Data.dll
 C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Data\obj\Debug\Data.pdb

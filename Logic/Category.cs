@@ -10,11 +10,11 @@ namespace Logic
 {
     public class Category
     {
-        RssGetter rss = new RssGetter();
+        CategorySaver saveFolder = new CategorySaver();
 
         public void newFolder(string category)
         {
-            rss.newFolder(category);
+            saveFolder.newFolder(category);
         }
     }
 }
