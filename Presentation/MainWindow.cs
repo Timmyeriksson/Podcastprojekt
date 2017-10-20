@@ -22,7 +22,7 @@ namespace Presentation
         public MainWindow()
         {
             InitializeComponent();
-            fillCategoryList();
+            FillCategoryList();
         }
 
         private void btn_delete_category_Click(object sender, EventArgs e)
@@ -34,10 +34,10 @@ namespace Presentation
                 if (confirm == DialogResult.Yes)
                 {
                     var folderToDelete = lb_category.SelectedItem.ToString();
-                    feed.remove(folderToDelete);
+                    feed.Remove(folderToDelete);
                     lb_category.Items.Clear();
                     cb_category.Items.Clear();
-                    fillCategoryList();
+                    FillCategoryList();
                 }
             }
         }
@@ -49,12 +49,12 @@ namespace Presentation
                 lb_category.Items.Clear();
                 cb_category.Items.Clear();
                 var categoryName = txtBox_new_category.Text;
-                cat.newFolder(categoryName);
-                fillCategoryList();
+                cat.NewFolder(categoryName);
+                FillCategoryList();
             }
         }
 
-        public void fillCategoryList()
+        public void FillCategoryList()
         {
             string[] catArray = Directory.GetDirectories(Directory.GetCurrentDirectory() + @"\categories");
 
@@ -80,7 +80,7 @@ namespace Presentation
             bool result = Int32.TryParse(interval, out number);
             if (result)
             {
-                pod.podInfo(podName, url, category, number);
+                pod.PodInfo(podName, url, category, number);
             }
             
         } 

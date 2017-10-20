@@ -1,31 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
 namespace Data
 {
-    public abstract class AbstractRssReader
+    public class RssReader
     {
-        public string readRSS(string url)
+        public void ReadRSS(string name, string url, string category)
         {
-            var xml = "";
-
-            using (var client = new System.Net.WebClient())
+            using (var client = new WebClient())
             {
-                client.Encoding = Encoding.UTF8;
-                xml = client.DownloadString("http://alexosigge.libsyn.com/rss");
+                string path = Directory.GetCurrentDirectory() + @"\categories\" + category + @"\" + name + ".xml";
+                client.DownloadFile(url, path);
+                client.Dispose();
+                   
             }
-
-            var newXmlDoc = new XmlDocument();
-            newXmlDoc.LoadXml(xml);
-
-            string path = "C:\\test.xml";
-            XmlTextWriter writer = new XmlTextWriter(path, null);
-
-            return url;
         }
 
     }

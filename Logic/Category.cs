@@ -12,7 +12,7 @@ namespace Logic
     {
         CategorySaver saveFolder = new CategorySaver();
 
-        public void newFolder(string category)
+        public void NewFolder(string category)
         {
             saveFolder.newFolder(category);
         }

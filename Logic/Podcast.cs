@@ -9,20 +9,21 @@ namespace Logic
 {
     public class Podcast
     {
-        public string name { get; set; }
-        public string url { get; set; }
-        public string category { get; set; }
-        public int interval { get; set; }
+        public string Name { get; set; }
+        public string Url { get; set; }
+        public string Category { get; set; }
+        public int Interval { get; set; }
 
-        
-        public void podInfo(string name, string url, string category, int interval)
+        RssReader reader = new RssReader();
+
+        public void PodInfo(string name, string url, string category, int interval)
         {
-            this.name = name;
-            this.url = url;
-            this.category = category;
-            this.interval = interval;
+            this.Name = name;
+            this.Url = url;
+            this.Category = category;
+            this.Interval = interval;
 
-
+            reader.ReadRSS(name, url, category);
         } 
     }
 }

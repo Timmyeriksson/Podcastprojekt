@@ -9,21 +9,21 @@ namespace Logic
 {
     public class Feed
     {
-        public void remove(string category)
+        public void Remove(string category)
         {
             string path = Directory.GetCurrentDirectory() + @"\categories\" + category;
 
             Directory.Delete(path, true);
         }
 
-        public void remove(string category, string namn)
+        public void Remove(string category, string namn)
         {
             string path = Directory.GetCurrentDirectory() + @"\" + category + @"\" + namn + @".xml";
 
             File.Delete(path);
         }
 
-        public void addPod(string name, string url, string category, string interval)
+        public void AddPod(string name, string url, string category, string interval)
         {
 
         }
