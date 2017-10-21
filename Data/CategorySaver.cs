@@ -12,17 +12,18 @@ namespace Data
     {
         public bool newFolder(string category)
         {
-            string folderName = category;
-
-            var folder = Directory.GetCurrentDirectory() + @"\categories";
-            var list = Directory.GetDirectories(folder);
-            Directory.CreateDirectory(Directory.GetCurrentDirectory() + @"\categories\" + category);
-            foreach (var cat in list)
+            try
             {
-                var info = new DirectoryInfo(cat);               
-            }
+                string folderName = category;
 
-            return true;
+                System.IO.Directory.CreateDirectory(folderName);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return false;
+            }
         }
 
 

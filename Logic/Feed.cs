@@ -22,10 +22,5 @@ namespace Logic
 
             File.Delete(path);
         }
-
-        public void AddPod(string name, string url, string category, string interval)
-        {
-
-        }
     }
 }

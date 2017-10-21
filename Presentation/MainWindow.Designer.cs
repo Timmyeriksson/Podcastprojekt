@@ -153,6 +153,7 @@
             this.lb_category.Name = "lb_category";
             this.lb_category.Size = new System.Drawing.Size(224, 224);
             this.lb_category.TabIndex = 11;
+            this.lb_category.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lb_category_MouseClick);
             // 
             // lb_podcast
             // 

@@ -9,17 +9,19 @@ using System.Xml;
 
 namespace Data
 {
-    public class RssReader
+    public class RssReader : AbstractRSS
     {
-        public void ReadRSS(string name, string url, string category)
+        public override XmlDocument ReadRSS(string urlstring)
         {
+            var xml = "";
             using (var client = new WebClient())
             {
-                string path = Directory.GetCurrentDirectory() + @"\categories\" + category + @"\" + name + ".xml";
-                client.DownloadFile(url, path);
-                client.Dispose();
-                   
+                client.Encoding = Encoding.UTF8;
+                xml = client.DownloadString(urlstring);
             }
+            XmlDocument dom = new XmlDocument();
+            dom.LoadXml(xml);
+            return dom;
         }
 
     }

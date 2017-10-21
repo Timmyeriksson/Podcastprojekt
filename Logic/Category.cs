@@ -11,7 +11,6 @@ namespace Logic
     public class Category
     {
         CategorySaver saveFolder = new CategorySaver();
-
         public void NewFolder(string category)
         {
             saveFolder.newFolder(category);

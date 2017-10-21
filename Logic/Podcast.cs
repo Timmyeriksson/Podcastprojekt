@@ -12,18 +12,18 @@ namespace Logic
         public string Name { get; set; }
         public string Url { get; set; }
         public string Category { get; set; }
-        public int Interval { get; set; }
+        public string Interval { get; set; }
 
-        RssReader reader = new RssReader();
-
-        public void PodInfo(string name, string url, string category, int interval)
+        public void PodInfo(string name, string url, string category, string interval)
         {
+            AddPod newPod = new AddPod();
+
             this.Name = name;
             this.Url = url;
             this.Category = category;
             this.Interval = interval;
 
-            reader.ReadRSS(name, url, category);
+            newPod.AddNewPod(name, url, category, interval);
         } 
     }
 }
