@@ -11,7 +11,7 @@ namespace Logic
     {
         public void Remove(string category)
         {
-            string path = Directory.GetCurrentDirectory() + @"\categories\" + category;
+            string path = Directory.GetCurrentDirectory() + @"\" + category;
 
             Directory.Delete(path, true);
         }
