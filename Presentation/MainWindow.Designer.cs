@@ -164,6 +164,7 @@
             this.lb_podcast.Name = "lb_podcast";
             this.lb_podcast.Size = new System.Drawing.Size(224, 224);
             this.lb_podcast.TabIndex = 13;
+            this.lb_podcast.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lb_podcast_MouseClick);
             // 
             // lbl_categories
             // 

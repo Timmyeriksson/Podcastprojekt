@@ -16,14 +16,16 @@ namespace Logic
 
         public void PodInfo(string name, string url, string category, string interval)
         {
-            AddPod newPod = new AddPod();
+            RssReader rss = new RssReader();
 
             this.Name = name;
             this.Url = url;
             this.Category = category;
             this.Interval = interval;
 
-            newPod.AddNewPod(name, url, category, interval);
-        } 
+            rss.ReadRSS(name, url, category);
+        }
+
+
     }
 }

@@ -18,6 +18,7 @@ namespace Presentation
         Category cat = new Category();
         Feed feed = new Feed();
         Podcast pod = new Podcast();
+        Episodes episode = new Episodes();
 
         public MainWindow()
         {
@@ -129,6 +130,14 @@ namespace Presentation
         {
             lb_podcast.Items.Clear();
             fillPodcastList(lb_category.Text, lb_podcast);
+        }
+
+        private void lb_podcast_MouseClick(object sender, MouseEventArgs e)
+        {
+            clb_episodes.Items.Clear();
+            var category = lb_category.SelectedItem.ToString();
+            var prePath = lb_podcast.SelectedItem.ToString();
+            episode.getEpisodes(category, prePath, clb_episodes);
         }
     }
 }

@@ -25,3 +25,17 @@ C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Presentation\bin\Debug\Data.dll
 C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Presentation\bin\Debug\Data.pdb
 C:\Users\Timmy\Documents\GitHub\Podcastprojekt\Presentation\bin\Debug\Data.dll
 C:\Users\Timmy\Documents\GitHub\Podcastprojekt\Presentation\bin\Debug\Data.pdb
+C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Presentation\bin\Debug\Presentation.exe.config
+C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Presentation\bin\Debug\Presentation.exe
+C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Presentation\bin\Debug\Presentation.pdb
+C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Presentation\bin\Debug\Logic.dll
+C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Presentation\bin\Debug\Data.dll
+C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Presentation\bin\Debug\Logic.pdb
+C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Presentation\bin\Debug\Data.pdb
+C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Presentation\obj\Debug\Presentation.csprojResolveAssemblyReference.cache
+C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Presentation\obj\Debug\Presentation.MainWindow.resources
+C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Presentation\obj\Debug\Presentation.Properties.Resources.resources
+C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Presentation\obj\Debug\Presentation.csproj.GenerateResource.Cache
+C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Presentation\obj\Debug\Presentation.csproj.CoreCompileInputs.cache
+C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Presentation\obj\Debug\Presentation.exe
+C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Presentation\obj\Debug\Presentation.pdb

@@ -13,3 +13,11 @@ C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Logic\bin\Debug\Data.pdb
 C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Logic\obj\Debug\Logic.csprojResolveAssemblyReference.cache
 C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Logic\obj\Debug\Logic.dll
 C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Logic\obj\Debug\Logic.pdb
+C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Logic\bin\Debug\Logic.dll
+C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Logic\bin\Debug\Logic.pdb
+C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Logic\bin\Debug\Data.dll
+C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Logic\bin\Debug\Data.pdb
+C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Logic\obj\Debug\Logic.csprojResolveAssemblyReference.cache
+C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Logic\obj\Debug\Logic.csproj.CoreCompileInputs.cache
+C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Logic\obj\Debug\Logic.dll
+C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Logic\obj\Debug\Logic.pdb
