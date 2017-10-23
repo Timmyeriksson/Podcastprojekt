@@ -9,9 +9,9 @@ using System.Xml;
 
 namespace Data
 {
-    public class RssReader : AbstractRSS
+    public class RssReader
     {
-        public override XmlDocument ReadRSS(string urlstring)
+        public XmlDocument ReadRSS(string urlstring)
         {
             var xml = "";
             using (var client = new WebClient())
