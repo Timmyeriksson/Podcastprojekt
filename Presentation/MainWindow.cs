@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Xml;
 using Logic;
 using System.IO;
+using System.Diagnostics;
 
 namespace Presentation
 {
@@ -138,6 +139,20 @@ namespace Presentation
             var category = lb_category.SelectedItem.ToString();
             var prePath = lb_podcast.SelectedItem.ToString();
             episode.getEpisodes(category, prePath, clb_episodes);
+        }
+
+        private void btn_play_podcast_Click(object sender, EventArgs e)
+        {
+            //var selected = clb_episodes.SelectedItem.ToString();
+            //var url = episode.getUrl(selected);
+            //Process.Start("wmplayer.exe", url);
+        }
+
+        private void clb_episodes_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            richtb_description.Clear();
+            var name = clb_episodes.SelectedItem.ToString();
+            episode.getDescription(name, richtb_description);
         }
     }
 }

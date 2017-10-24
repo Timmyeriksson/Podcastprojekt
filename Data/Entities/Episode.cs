@@ -11,6 +11,7 @@ namespace Data.Enteties
         public string Title { get; set; }
         public string Url { get; set; }
         public string Description { get; set; }
+        public bool ListenedTo { get; set; }
 
         public override string ToString()
         {

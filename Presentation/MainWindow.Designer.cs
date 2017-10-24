@@ -43,7 +43,6 @@
             this.lbl_podcast = new System.Windows.Forms.Label();
             this.lbl_episodes = new System.Windows.Forms.Label();
             this.lbl_pod_description = new System.Windows.Forms.Label();
-            this.lb_description = new System.Windows.Forms.ListBox();
             this.lbl_edit_category = new System.Windows.Forms.Label();
             this.lbl_new_category = new System.Windows.Forms.Label();
             this.lbl_url = new System.Windows.Forms.Label();
@@ -58,6 +57,7 @@
             this.btn_edit_podcast_url = new System.Windows.Forms.Button();
             this.btn_edit_podcast_name = new System.Windows.Forms.Button();
             this.cb_interval = new System.Windows.Forms.ComboBox();
+            this.richtb_description = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // btn_delete_category
@@ -100,6 +100,7 @@
             this.btn_play_podcast.TabIndex = 12;
             this.btn_play_podcast.Text = "Play podcast";
             this.btn_play_podcast.UseVisualStyleBackColor = true;
+            this.btn_play_podcast.Click += new System.EventHandler(this.btn_play_podcast_Click);
             // 
             // btn_add_podcast
             // 
@@ -204,17 +205,7 @@
             this.lbl_pod_description.Name = "lbl_pod_description";
             this.lbl_pod_description.Size = new System.Drawing.Size(148, 20);
             this.lbl_pod_description.TabIndex = 17;
-            this.lbl_pod_description.Text = "Podcast description";
-            // 
-            // lb_description
-            // 
-            this.lb_description.FormattingEnabled = true;
-            this.lb_description.ItemHeight = 20;
-            this.lb_description.Location = new System.Drawing.Point(869, 215);
-            this.lb_description.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.lb_description.Name = "lb_description";
-            this.lb_description.Size = new System.Drawing.Size(397, 224);
-            this.lb_description.TabIndex = 18;
+            this.lbl_pod_description.Text = "Episode description";
             // 
             // lbl_edit_category
             // 
@@ -314,6 +305,7 @@
             this.clb_episodes.Name = "clb_episodes";
             this.clb_episodes.Size = new System.Drawing.Size(224, 214);
             this.clb_episodes.TabIndex = 28;
+            this.clb_episodes.MouseClick += new System.Windows.Forms.MouseEventHandler(this.clb_episodes_MouseClick_1);
             // 
             // btn_edit_pod_location
             // 
@@ -355,11 +347,21 @@
             this.cb_interval.Size = new System.Drawing.Size(246, 28);
             this.cb_interval.TabIndex = 32;
             // 
+            // richtb_description
+            // 
+            this.richtb_description.Location = new System.Drawing.Point(869, 216);
+            this.richtb_description.Name = "richtb_description";
+            this.richtb_description.ReadOnly = true;
+            this.richtb_description.Size = new System.Drawing.Size(353, 213);
+            this.richtb_description.TabIndex = 33;
+            this.richtb_description.Text = "";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1291, 560);
+            this.Controls.Add(this.richtb_description);
             this.Controls.Add(this.cb_interval);
             this.Controls.Add(this.btn_edit_podcast_name);
             this.Controls.Add(this.btn_edit_podcast_url);
@@ -374,7 +376,6 @@
             this.Controls.Add(this.lbl_url);
             this.Controls.Add(this.lbl_new_category);
             this.Controls.Add(this.lbl_edit_category);
-            this.Controls.Add(this.lb_description);
             this.Controls.Add(this.lbl_pod_description);
             this.Controls.Add(this.lbl_episodes);
             this.Controls.Add(this.lbl_podcast);
@@ -415,7 +416,6 @@
         private System.Windows.Forms.Label lbl_podcast;
         private System.Windows.Forms.Label lbl_episodes;
         private System.Windows.Forms.Label lbl_pod_description;
-        private System.Windows.Forms.ListBox lb_description;
         private System.Windows.Forms.Label lbl_edit_category;
         private System.Windows.Forms.Label lbl_new_category;
         private System.Windows.Forms.Label lbl_url;
@@ -430,6 +430,7 @@
         private System.Windows.Forms.Button btn_edit_podcast_url;
         private System.Windows.Forms.Button btn_edit_podcast_name;
         private System.Windows.Forms.ComboBox cb_interval;
+        private System.Windows.Forms.RichTextBox richtb_description;
     }
 }
 

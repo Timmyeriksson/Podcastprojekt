@@ -14,6 +14,7 @@ namespace Logic
 {
     public class Episodes
     {
+        List<Episode> episodes = new List<Episode>();
         public void getEpisodes(string category, string prePath, CheckedListBox chlBox)
         {
             var path = Directory.GetCurrentDirectory() + @"\" + category + @"\" + prePath + @".xml";
@@ -22,13 +23,15 @@ namespace Logic
             var feed = SyndicationFeed.Load(xml);
             xml.Close();
 
-            List<Episode> episodes = new List<Episode>();
+            
 
             foreach (var episode in feed.Items)
             {
                 var pod = new Episode()
                 {
                     Title = episode.Title.Text,
+                    Description = episode.Summary.Text,
+                    ListenedTo = false
                 };
                 foreach (var link in episode.Links)
                 {
@@ -38,8 +41,7 @@ namespace Logic
                         continue;
                     }
                 }
-                episodes.Add(pod);
-                
+                episodes.Add(pod);              
             }
             foreach (var item in episodes)
             {
@@ -47,5 +49,22 @@ namespace Logic
             }
             
         }
+
+        public void getDescription(string name, RichTextBox richtb)
+        {
+
+            var desc = from x in episodes
+                       where x.Title == name
+                       select x.Description;
+
+            richtb.AppendText(desc.Single().ToString());
+
+        }
+
+        //public string getUrl(string episode)
+        //{
+        //    Episode eps = new Episode();
+        //    var query = from c in eps where c.
+        //}
     }
 }
