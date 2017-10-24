@@ -42,17 +42,11 @@ namespace Logic
             }
         }
 
-        public static bool categoryBoxNotEmpty(ComboBox cb, ListBox list)
+        public static bool categoryBoxNotEmpty(ComboBox cb)
         {
             if (cb.Text == "")
             {
                 MessageBox.Show("Please choose the new category");
-                cb.Focus();
-                return false;
-            }
-            else if (cb.SelectedItem == list.SelectedItem)
-            {
-                MessageBox.Show("Podcast already belongs to that category");
                 cb.Focus();
                 return false;
             }

@@ -23,28 +23,52 @@ namespace Logic
             var feed = SyndicationFeed.Load(xml);
             xml.Close();
 
-            
 
-            foreach (var episode in feed.Items)
+            if (episodes.Count == 0)
             {
-                var pod = new Episode()
+                foreach (var episode in feed.Items)
                 {
-                    Title = episode.Title.Text,
-                    Description = episode.Summary.Text,
-                    ListenedTo = false
-                };
-                foreach (var link in episode.Links)
-                {
+                    var pod = new Episode()
+                    {
+                        Title = episode.Title.Text,
+                        Description = episode.Summary.Text,
+                        ListenedTo = false
+                    };
+                    foreach (var link in episode.Links)
+                    {
                         pod.Url = link.Uri.OriginalString;
-                        continue;                
+                        continue;
+                    }
+                    episodes.Add(pod);
                 }
-                episodes.Add(pod);              
+                foreach (var item in episodes)
+                {
+                    chlBox.Items.Add(item, false);
+                }
             }
-            foreach (var item in episodes)
+            else
             {
-                chlBox.Items.Add(item, false);
+                episodes.Clear();
+                foreach (var episode in feed.Items)
+                {
+                    var pod = new Episode()
+                    {
+                        Title = episode.Title.Text,
+                        Description = episode.Summary.Text,
+                        ListenedTo = false
+                    };
+                    foreach (var link in episode.Links)
+                    {
+                        pod.Url = link.Uri.OriginalString;
+                        continue;
+                    }
+                    episodes.Add(pod);
+                }
+                foreach (var item in episodes)
+                {
+                    chlBox.Items.Add(item, false);
+                }
             }
-            
         }
 
         public void getDescription(string name, RichTextBox richtb)

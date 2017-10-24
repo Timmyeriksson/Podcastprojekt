@@ -80,6 +80,7 @@
             this.btn_delete_podcast.TabIndex = 17;
             this.btn_delete_podcast.Text = "Delete podcast";
             this.btn_delete_podcast.UseVisualStyleBackColor = true;
+            this.btn_delete_podcast.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btn_delete_podcast_MouseClick);
             // 
             // btn_delete_episode
             // 

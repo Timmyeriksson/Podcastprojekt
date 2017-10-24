@@ -84,7 +84,7 @@ namespace Presentation
             {
                 string[] podArray = Directory.GetFiles(category);
 
-                foreach(string pod in podArray)
+                foreach (string pod in podArray)
                 {
                     string[] splitPod = pod.Split('\\');
                     string trim = splitPod[splitPod.Length - 1];
@@ -117,19 +117,20 @@ namespace Presentation
 
         private void btn_add_podcast_Click(object sender, EventArgs e)
         {
-            if(Validation.tfNotEmpty(txtBox_new_pod, "Podcast name ") && Validation.tfNotEmpty(txtBox_url, "URL ") && Validation.categoryBoxNotEmpty(cb_category, lb_category) && Validation.intervalBoxNotEmpty(cb_interval, lb_podcast))
-            {             
+            if (Validation.tfNotEmpty(txtBox_new_pod, "Podcast name ") && Validation.tfNotEmpty(txtBox_url, "URL ") && Validation.categoryBoxNotEmpty(cb_category) && Validation.intervalBoxNotEmpty(cb_interval, lb_podcast))
+            {
                 var podName = txtBox_new_pod.Text;
                 var url = txtBox_url.Text;
                 var category = cb_category.SelectedItem.ToString();
                 var interval = cb_interval.SelectedItem.ToString();
                 pod.PodInfo(podName, url, category, interval);
-            }            
+            }
         }
 
         private void lb_category_MouseClick(object sender, MouseEventArgs e)
         {
             lb_podcast.Items.Clear();
+            clb_episodes.Items.Clear();
             fillPodcastList(lb_category.Text, lb_podcast);
         }
 
@@ -154,6 +155,15 @@ namespace Presentation
             richtb_description.Clear();
             var name = clb_episodes.SelectedItem.ToString();
             episode.getDescription(name, richtb_description);
+        }
+
+        private void btn_delete_podcast_MouseClick(object sender, MouseEventArgs e)
+        {
+            var category = lb_category.SelectedItem.ToString();
+            var name = lb_podcast.SelectedItem.ToString();
+            feed.Remove(category, name);
+            lb_podcast.Items.Clear();
+            fillPodcastList(lb_category.Text, lb_podcast);
         }
     }
 }
