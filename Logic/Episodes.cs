@@ -35,11 +35,8 @@ namespace Logic
                 };
                 foreach (var link in episode.Links)
                 {
-                    if (link.Uri.OriginalString.EndsWith(".mp3"))
-                    {
                         pod.Url = link.Uri.OriginalString;
-                        continue;
-                    }
+                        continue;                
                 }
                 episodes.Add(pod);              
             }
@@ -61,10 +58,14 @@ namespace Logic
 
         }
 
-        //public string getUrl(string episode)
-        //{
-        //    Episode eps = new Episode();
-        //    var query = from c in eps where c.
-        //}
+        public string getUrl(string episode)
+        {
+
+            var query = from c in episodes
+                        where c.Title == episode
+                        select c.Url;
+
+            return query.Single().ToString();
+        }
     }
 }

@@ -143,9 +143,10 @@ namespace Presentation
 
         private void btn_play_podcast_Click(object sender, EventArgs e)
         {
-            //var selected = clb_episodes.SelectedItem.ToString();
-            //var url = episode.getUrl(selected);
-            //Process.Start("wmplayer.exe", url);
+            var selected = clb_episodes.SelectedItem.ToString();
+            var url = episode.getUrl(selected);
+
+            Process.Start(url);
         }
 
         private void clb_episodes_MouseClick_1(object sender, MouseEventArgs e)
