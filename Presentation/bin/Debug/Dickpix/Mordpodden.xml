@@ -1,0 +1,568 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+  <channel>
+    <title>Mordpodden</title>
+    <link>https://www.radioplay.se/podcast/mordpodden</link>
+    <description>I den här podden får du tillsammans med Amanda Karlsson &amp; Linnea Bohlin grotta ner dig i läskiga, sanna &amp; riktigt spännande mordfall.</description>
+    <itunes:author>RadioPlay</itunes:author>
+    <copyright>Bauer Media Group</copyright>
+    <itunes:summary>I den här podden får du tillsammans med Amanda Karlsson &amp; Linnea Bohlin grotta ner dig i läskiga, sanna &amp; riktigt spännande mordfall.</itunes:summary>
+    <itunes:type>episodic</itunes:type>
+    <itunes:owner>
+      <itunes:email>info@radioplay.se</itunes:email>
+      <itunes:name>RadioPlay</itunes:name>
+    </itunes:owner>
+    <itunes:category text="Society &amp; Culture">
+      <itunes:category text="History"/>
+    </itunes:category>
+    <itunes:image href="http://d46xrhm44izup.cloudfront.net/rss/rp/?url=%2Fimg%2F6fb0169446ad40940b0f445863754fae.jpg"/>
+    <language>sv-SE</language>
+    <itunes:explicit>no</itunes:explicit>
+    <item>
+      <title>Trailer - Säsong fem</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/mordpodden_trailer_s_song_5_23e5185e.mp3?awEpisodeId=35167&amp;awCollectionId=441</link>
+      <pubDate>Tue, 24 Oct 2017 11:00:00 +0200</pubDate>
+      <guid isPermaLink="false">23e5185ef9c0cc24adb779ffd60a90c8</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/mordpodden_trailer_s_song_5_23e5185e.mp3?awEpisodeId=35167&amp;awCollectionId=441" length="3486016" type="audio/mpeg"/>
+      <itunes:subtitle>Om mindre än en vecka är vi tillbaka med säsong fem!</itunes:subtitle>
+      <itunes:summary>Om mindre än en vecka är vi tillbaka med säsong fem!</itunes:summary>
+      <itunes:duration>00:01:27</itunes:duration>
+      <itunes:type>TRAILER</itunes:type>
+      <itunes:season>5</itunes:season>
+      <itunes:episode>None</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>Trailer - Misslyckade Brott</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/misslyckade_brott_mordpodden_pro_c94f0453.mp3?awEpisodeId=34920&amp;awCollectionId=441</link>
+      <pubDate>Thu, 14 Sep 2017 12:00:00 +0200</pubDate>
+      <guid isPermaLink="false">c94f045362a92a3d18e198fa8facb881</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/misslyckade_brott_mordpodden_pro_c94f0453.mp3?awEpisodeId=34920&amp;awCollectionId=441" length="1874508" type="audio/mpeg"/>
+      <itunes:subtitle>En podcast om de brott som inte gått som det var tänkt. Här får du höra allt om snälla kidnappare och märkliga bankrån.</itunes:subtitle>
+      <itunes:summary>En podcast om de brott som inte gått som det var tänkt. Här får du höra allt om snälla kidnappare och märkliga bankrån.</itunes:summary>
+      <itunes:duration>00:01:17</itunes:duration>
+      <itunes:type>BONUS</itunes:type>
+      <itunes:season>6</itunes:season>
+      <itunes:episode>1</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S04E06 Greven</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/s04e06_greven_25fc0ed4.mp3?awEpisodeId=34768&amp;awCollectionId=441</link>
+      <pubDate>Sun, 27 Aug 2017 03:00:00 +0200</pubDate>
+      <guid isPermaLink="false">25fc0ed48aebb23c4ef38e04a037d18b</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/s04e06_greven_25fc0ed4.mp3?awEpisodeId=34768&amp;awCollectionId=441" length="45377056" type="audio/mpeg"/>
+      <itunes:subtitle>En charmig man får kvinnorna på fall, men bakom den trevliga ytan döljer sig ett mörker och många hemligheter.</itunes:subtitle>
+      <itunes:summary>En charmig man får kvinnorna på fall, men bakom den trevliga ytan döljer sig ett mörker och många hemligheter.</itunes:summary>
+      <itunes:duration>00:37:48</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>4</itunes:season>
+      <itunes:episode>6</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S04E05 Stureplansmorden</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/s04e05_stureplansmorden_b6141a0d.mp3?awEpisodeId=34553&amp;awCollectionId=441</link>
+      <pubDate>Sun, 13 Aug 2017 03:00:00 +0200</pubDate>
+      <guid isPermaLink="false">b6141a0d35f22d091a845a4c2f532e1e</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/s04e05_stureplansmorden_b6141a0d.mp3?awEpisodeId=34553&amp;awCollectionId=441" length="47115616" type="audio/mpeg"/>
+      <itunes:subtitle>Den 3 december 1994 urartar ett krogbråk som får oanade konsekvenser.</itunes:subtitle>
+      <itunes:summary>Den 3 december 1994 urartar ett krogbråk som får oanade konsekvenser.</itunes:summary>
+      <itunes:duration>00:39:15</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>4</itunes:season>
+      <itunes:episode>5</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S04E04 Sturebymordet</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/s04e04_sturebymordet_08116600.mp3?awEpisodeId=34471&amp;awCollectionId=441</link>
+      <pubDate>Sun, 30 Jul 2017 03:00:00 +0200</pubDate>
+      <guid isPermaLink="false">081166001f006a74540337815f008134</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/s04e04_sturebymordet_08116600.mp3?awEpisodeId=34471&amp;awCollectionId=441" length="47435776" type="audio/mpeg"/>
+      <itunes:subtitle>I en 16-årings telefon gömmer sig en sms-konversation där det står att han måste ta livet av en skolkamrat.</itunes:subtitle>
+      <itunes:summary>I en 16-årings telefon gömmer sig en sms-konversation där det står att han måste ta livet av en skolkamrat.</itunes:summary>
+      <itunes:duration>00:39:31</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>4</itunes:season>
+      <itunes:episode>4</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S04E03 Tandläkarmordet</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/s04e03_tandla_karmordet_96275c4e.mp3?awEpisodeId=34373&amp;awCollectionId=441</link>
+      <pubDate>Sun, 16 Jul 2017 03:00:00 +0200</pubDate>
+      <guid isPermaLink="false">96275c4ebe35c21d387bb8fd55696a32</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/s04e03_tandla_karmordet_96275c4e.mp3?awEpisodeId=34373&amp;awCollectionId=441" length="50311936" type="audio/mpeg"/>
+      <itunes:subtitle>Vad Fredrik trodde var en olycka var i själva verket ett mordförsök. Och personen som knuffat honom skulle försöka igen.</itunes:subtitle>
+      <itunes:summary>Vad Fredrik trodde var en olycka var i själva verket ett mordförsök. Och personen som knuffat honom skulle försöka igen.</itunes:summary>
+      <itunes:duration>00:41:55</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>4</itunes:season>
+      <itunes:episode>3</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S04E02 Styckmörderskan</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/s04e02_styckmo_rderskan_e4dfa266.mp3?awEpisodeId=34195&amp;awCollectionId=441</link>
+      <pubDate>Sun, 02 Jul 2017 03:00:00 +0200</pubDate>
+      <guid isPermaLink="false">e4dfa266493a9dfc0c03c4243640b4ad</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/s04e02_styckmo_rderskan_e4dfa266.mp3?awEpisodeId=34195&amp;awCollectionId=441" length="53005696" type="audio/mpeg"/>
+      <itunes:subtitle>Mönstereleven Lonela är spårlöst försvunnen. Samtidigt ligger delar av hennes man på Riddarfjärdens botten.</itunes:subtitle>
+      <itunes:summary>Mönstereleven Lonela är spårlöst försvunnen. Samtidigt ligger delar av hennes man på Riddarfjärdens botten.</itunes:summary>
+      <itunes:duration>00:44:10</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>4</itunes:season>
+      <itunes:episode>2</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S04E01 Träskmorden</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/s04e01_tra_skmorden_d766dd4b.mp3?awEpisodeId=34053&amp;awCollectionId=441</link>
+      <pubDate>Sun, 18 Jun 2017 03:00:00 +0200</pubDate>
+      <guid isPermaLink="false">d766dd4be458e0977e94b3ac741590c6</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/s04e01_tra_skmorden_d766dd4b.mp3?awEpisodeId=34053&amp;awCollectionId=441" length="53255776" type="audio/mpeg"/>
+      <itunes:subtitle>År 1966 florerar hemska rykten i Stockholms undre värld. Det sägs att det ligger lik på Nybrovikens botten.</itunes:subtitle>
+      <itunes:summary>År 1966 florerar hemska rykten i Stockholms undre värld. Det sägs att det ligger lik på Nybrovikens botten.</itunes:summary>
+      <itunes:duration>00:44:22</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>4</itunes:season>
+      <itunes:episode>1</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S03E10 Trippelmordet i Åmsele</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/s03e10_trippelmordet_i_a_msele_ebe7b916.mp3?awEpisodeId=33162&amp;awCollectionId=441</link>
+      <pubDate>Sun, 23 Apr 2017 03:00:00 +0200</pubDate>
+      <guid isPermaLink="false">ebe7b916b24988c1daf9f551859e2104</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/s03e10_trippelmordet_i_a_msele_ebe7b916.mp3?awEpisodeId=33162&amp;awCollectionId=441" length="47475616" type="audio/mpeg"/>
+      <itunes:subtitle>Trippelmordet som skakade Sverige.</itunes:subtitle>
+      <itunes:summary>Trippelmordet som skakade Sverige.</itunes:summary>
+      <itunes:duration>00:39:33</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>3</itunes:season>
+      <itunes:episode>10</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S03E09 Asylmordet i Kiruna</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/s03e09_asylmordet_i_kiruna_927f6cdf.mp3?awEpisodeId=33052&amp;awCollectionId=441</link>
+      <pubDate>Sun, 16 Apr 2017 01:00:00 +0200</pubDate>
+      <guid isPermaLink="false">927f6cdfcf82fa1fd79895ade5dd1dd1</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/s03e09_asylmordet_i_kiruna_927f6cdf.mp3?awEpisodeId=33052&amp;awCollectionId=441" length="57898336" type="audio/mpeg"/>
+      <itunes:subtitle>Sommaren 2016 hittas en kvinna död i Kiruna. Till en början ser det ut som ett självmord, men så är inte fallet.</itunes:subtitle>
+      <itunes:summary>Sommaren 2016 hittas en kvinna död i Kiruna. Till en början ser det ut som ett självmord, men så är inte fallet.</itunes:summary>
+      <itunes:duration>00:48:14</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>3</itunes:season>
+      <itunes:episode>9</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S03E08 Bodenfallet</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/s03e08_bodenfallet_9d28bf74.mp3?awEpisodeId=32867&amp;awCollectionId=441</link>
+      <pubDate>Sun, 09 Apr 2017 03:00:00 +0200</pubDate>
+      <guid isPermaLink="false">9d28bf74695511d8e106fedb7eccde0d</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/s03e08_bodenfallet_9d28bf74.mp3?awEpisodeId=32867&amp;awCollectionId=441" length="54035776" type="audio/mpeg"/>
+      <itunes:subtitle>En tillsynes vanliga vårdag åker en ung kvinna iväg till en kompis för att plugga. Tyvärr kommer hon inte hem igen.</itunes:subtitle>
+      <itunes:summary>En tillsynes vanliga vårdag åker en ung kvinna iväg till en kompis för att plugga. Tyvärr kommer hon inte hem igen.</itunes:summary>
+      <itunes:duration>00:45:01</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>3</itunes:season>
+      <itunes:episode>8</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S03E07 Mordet i Kärrbäck</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/s03e07_mordet_i_ka_rrba_ck_8e4efa82.mp3?awEpisodeId=32640&amp;awCollectionId=441</link>
+      <pubDate>Sun, 02 Apr 2017 01:00:00 +0200</pubDate>
+      <guid isPermaLink="false">8e4efa82187495998f2cc19eea0bca41</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/s03e07_mordet_i_ka_rrba_ck_8e4efa82.mp3?awEpisodeId=32640&amp;awCollectionId=441" length="59413216" type="audio/mpeg"/>
+      <itunes:subtitle>2012 hittas en man död i sin bostad. Han har en kriminell bakgrund och det finns flera misstänkta.</itunes:subtitle>
+      <itunes:summary>2012 hittas en man död i sin bostad. Han har en kriminell bakgrund och det finns flera misstänkta.</itunes:summary>
+      <itunes:duration>00:49:30</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>3</itunes:season>
+      <itunes:episode>7</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S03E06 Turistmordet</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/s03e06_turistmordet_i_ohtanaja_r_ab778737.mp3?awEpisodeId=32412&amp;awCollectionId=441</link>
+      <pubDate>Sun, 26 Mar 2017 03:00:00 +0200</pubDate>
+      <guid isPermaLink="false">ab7787373a9f4295293e0e6f55b6b9a1</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/s03e06_turistmordet_i_ohtanaja_r_ab778737.mp3?awEpisodeId=32412&amp;awCollectionId=441" length="50195776" type="audio/mpeg"/>
+      <itunes:subtitle>En härlig familjesemester övergår till en riktig mardröm.</itunes:subtitle>
+      <itunes:summary>En härlig familjesemester övergår till en riktig mardröm.</itunes:summary>
+      <itunes:duration>00:41:49</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>3</itunes:season>
+      <itunes:episode>6</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S03E05 Carolin-fallet</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/s03e05_carolin_fallet_438017cc.mp3?awEpisodeId=32299&amp;awCollectionId=441</link>
+      <pubDate>Sun, 19 Mar 2017 01:00:00 +0100</pubDate>
+      <guid isPermaLink="false">438017cc7bf250ba67a038d7d1f2768a</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/s03e05_carolin_fallet_438017cc.mp3?awEpisodeId=32299&amp;awCollectionId=441" length="50931616" type="audio/mpeg"/>
+      <itunes:subtitle>Hösten 2008 försvinner en kvinna från en rastplats utanför Gällivare och Norrbottens största polisutredning drar igång.</itunes:subtitle>
+      <itunes:summary>Hösten 2008 försvinner en kvinna från en rastplats utanför Gällivare och Norrbottens största polisutredning drar igång.</itunes:summary>
+      <itunes:duration>00:42:26</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>3</itunes:season>
+      <itunes:episode>5</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S03E04 Rånmorden i Rosvik</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/s03e04_dubbelra_nmordet_i_rosvik_1ea2e2e2.mp3?awEpisodeId=32003&amp;awCollectionId=441</link>
+      <pubDate>Sun, 12 Mar 2017 03:00:00 +0100</pubDate>
+      <guid isPermaLink="false">1ea2e2e2a5da0bae23bc5d54e0370c1e</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/s03e04_dubbelra_nmordet_i_rosvik_1ea2e2e2.mp3?awEpisodeId=32003&amp;awCollectionId=441" length="52075936" type="audio/mpeg"/>
+      <itunes:subtitle>Det är bara en slump att två för varandra okända män hamnar i samma kö. En slump som kostade två bröder livet.</itunes:subtitle>
+      <itunes:summary>Det är bara en slump att två för varandra okända män hamnar i samma kö. En slump som kostade två bröder livet.</itunes:summary>
+      <itunes:duration>00:43:23</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>3</itunes:season>
+      <itunes:episode>4</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S03E03 Michael-fallet</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/s03e03_michael_fallet_6372f353.mp3?awEpisodeId=31730&amp;awCollectionId=441</link>
+      <pubDate>Sun, 05 Mar 2017 01:00:00 +0100</pubDate>
+      <guid isPermaLink="false">6372f353db2fd8fb43ac11f1c67a37b8</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/s03e03_michael_fallet_6372f353.mp3?awEpisodeId=31730&amp;awCollectionId=441" length="50748256" type="audio/mpeg"/>
+      <itunes:subtitle>År 1990 åker en ambulans till sjön Tjeggelvas i Lappland. En pojke uppges ha drunknat men ingenting är som det ser ut.</itunes:subtitle>
+      <itunes:summary>År 1990 åker en ambulans till sjön Tjeggelvas i Lappland. En pojke uppges ha drunknat men ingenting är som det ser ut.</itunes:summary>
+      <itunes:duration>00:42:17</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>3</itunes:season>
+      <itunes:episode>3</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S03E02 Styckmordet i Lycksele</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/s03e02_styckmordet_i_lycksele_7516dc62.mp3?awEpisodeId=31561&amp;awCollectionId=441</link>
+      <pubDate>Sun, 26 Feb 2017 03:00:00 +0100</pubDate>
+      <guid isPermaLink="false">7516dc62042490ec62ce6ba10cd80a42</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/s03e02_styckmordet_i_lycksele_7516dc62.mp3?awEpisodeId=31561&amp;awCollectionId=441" length="50025856" type="audio/mpeg"/>
+      <itunes:subtitle>År 2000 drabbas samhället Lycksele av en tragisk händelse. En ung tjej försvinner och hittas senare styckmördad.</itunes:subtitle>
+      <itunes:summary>År 2000 drabbas samhället Lycksele av en tragisk händelse. En ung tjej försvinner och hittas senare styckmördad.</itunes:summary>
+      <itunes:duration>00:41:41</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>3</itunes:season>
+      <itunes:episode>2</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S03E01 Morden vid Akkajaure</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/s03e01_morden_vid_akkajaure_a27b85ef.mp3?awEpisodeId=31265&amp;awCollectionId=441</link>
+      <pubDate>Sun, 19 Feb 2017 01:00:00 +0100</pubDate>
+      <guid isPermaLink="false">a27b85ef3418d62a619ad80573c140d8</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/s03e01_morden_vid_akkajaure_a27b85ef.mp3?awEpisodeId=31265&amp;awCollectionId=441" length="53235616" type="audio/mpeg"/>
+      <itunes:subtitle>År 1951 utspelar sig ett drama i de svenska fjällen då en mordmisstänkt jagas av poliser från både Norge och Sverige.</itunes:subtitle>
+      <itunes:summary>År 1951 utspelar sig ett drama i de svenska fjällen då en mordmisstänkt jagas av poliser från både Norge och Sverige.</itunes:summary>
+      <itunes:duration>00:44:21</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>3</itunes:season>
+      <itunes:episode>1</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>Bonus: Julmordet i Finland</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/2016-12-19_b4c7858c_julspecial.mp3?awEpisodeId=29886&amp;awCollectionId=441</link>
+      <pubDate>Sun, 25 Dec 2016 03:00:00 +0100</pubDate>
+      <guid isPermaLink="false">b4c7858c31aeea72a2414aefd47018ce6be72a43</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/2016-12-19_b4c7858c_julspecial.mp3?awEpisodeId=29886&amp;awCollectionId=441" length="47535616" type="audio/mpeg"/>
+      <itunes:subtitle>I juldagarna får 70-åriga Marta oväntat besök. Men hon borde aldrig ha öppnat dörren.</itunes:subtitle>
+      <itunes:summary>I juldagarna får 70-åriga Marta oväntat besök. Men hon borde aldrig ha öppnat dörren.</itunes:summary>
+      <itunes:duration>00:39:36</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>2</itunes:season>
+      <itunes:episode>13</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S02E12 Lustmorden i Kristianstad</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/2016-11-24_cce672f1_s02e12_lustmordenny.mp3?awEpisodeId=28880&amp;awCollectionId=441</link>
+      <pubDate>Sun, 27 Nov 2016 03:00:00 +0100</pubDate>
+      <guid isPermaLink="false">cce672f18f516ca23477cf68d98399d2450eddf8</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/2016-11-24_cce672f1_s02e12_lustmordenny.mp3?awEpisodeId=28880&amp;awCollectionId=441" length="49500256" type="audio/mpeg"/>
+      <itunes:subtitle>1995 hittas en kvinna mördad i Kristianstad och det går snart upp för polisen att gärningsmannen är en så kallad lustmördare.</itunes:subtitle>
+      <itunes:summary>1995 hittas en kvinna mördad i Kristianstad och det går snart upp för polisen att gärningsmannen är en så kallad lustmördare.</itunes:summary>
+      <itunes:duration>00:41:14</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>2</itunes:season>
+      <itunes:episode>12</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S02E11 Elevmordet i Bjuv</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/2016-11-17_a04b2120_elevmordet_klar.mp3?awEpisodeId=28704&amp;awCollectionId=441</link>
+      <pubDate>Sun, 20 Nov 2016 03:00:00 +0100</pubDate>
+      <guid isPermaLink="false">a04b212095fffb1818028542c8a8cb4eced8d2bb</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/2016-11-17_a04b2120_elevmordet_klar.mp3?awEpisodeId=28704&amp;awCollectionId=441" length="47815936" type="audio/mpeg"/>
+      <itunes:subtitle>En elev hittas mördad utanför sin skola. Sanningen om vad som har hänt är svår att acceptera.</itunes:subtitle>
+      <itunes:summary>En elev hittas mördad utanför sin skola. Sanningen om vad som har hänt är svår att acceptera.</itunes:summary>
+      <itunes:duration>00:39:50</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>2</itunes:season>
+      <itunes:episode>11</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S02E10 Flickmorden runt Kristianstad</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/2016-11-09_8437b89f_s02e10_flickmorden.mp3?awEpisodeId=28285&amp;awCollectionId=441</link>
+      <pubDate>Sun, 13 Nov 2016 03:00:00 +0100</pubDate>
+      <guid isPermaLink="false">8437b89f696771f63e59b2ed58891275afb0e472</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/2016-11-09_8437b89f_s02e10_flickmorden.mp3?awEpisodeId=28285&amp;awCollectionId=441" length="42129856" type="audio/mpeg"/>
+      <itunes:subtitle>I december 1992 hittas en 16-årig flicka död i en kanal och bara månader senare skulle ännu en tjej falla offer för samma man.</itunes:subtitle>
+      <itunes:summary>I december 1992 hittas en 16-årig flicka död i en kanal och bara månader senare skulle ännu en tjej falla offer för samma man.</itunes:summary>
+      <itunes:duration>00:35:06</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>2</itunes:season>
+      <itunes:episode>10</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S02E09 Helénmordet i Hörby</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/2016-10-31_dd4d4781_s02e09_helenmordet_i_ho__rby.mp3?awEpisodeId=27811&amp;awCollectionId=441</link>
+      <pubDate>Sun, 06 Nov 2016 03:00:00 +0100</pubDate>
+      <guid isPermaLink="false">dd4d4781f59bef31d5c3cfdce40db55c4ac27e1b</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/2016-10-31_dd4d4781_s02e09_helenmordet_i_ho__rby.mp3?awEpisodeId=27811&amp;awCollectionId=441" length="45575776" type="audio/mpeg"/>
+      <itunes:subtitle>1989 hittas en tio-årig flicka mördad. Men det skulle ta många år innan man fick reda på vem som gjort henne illa.</itunes:subtitle>
+      <itunes:summary>1989 hittas en tio-årig flicka mördad. Men det skulle ta många år innan man fick reda på vem som gjort henne illa.</itunes:summary>
+      <itunes:duration>00:37:58</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>2</itunes:season>
+      <itunes:episode>9</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S02E08 Kannibalmordet i Malmö</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/2016-10-26_164751d3_s02e08_kannibalmordet.mp3?awEpisodeId=27629&amp;awCollectionId=441</link>
+      <pubDate>Sun, 30 Oct 2016 03:00:00 +0100</pubDate>
+      <guid isPermaLink="false">164751d31edd9d0c57115056cd761849061bca7c</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/2016-10-26_164751d3_s02e08_kannibalmordet.mp3?awEpisodeId=27629&amp;awCollectionId=441" length="40001056" type="audio/mpeg"/>
+      <itunes:subtitle>En kvinna försvinner under hösten 1979 och återfinns först månader senare i Malmös hamn.</itunes:subtitle>
+      <itunes:summary>En kvinna försvinner under hösten 1979 och återfinns först månader senare i Malmös hamn.</itunes:summary>
+      <itunes:duration>00:33:19</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>2</itunes:season>
+      <itunes:episode>8</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S02E07 Narkotikamorden i Malmö</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/2016-10-17_8fe144bb_s02e07_narkotikamorden_i_malmo__.mp3?awEpisodeId=27135&amp;awCollectionId=441</link>
+      <pubDate>Sun, 23 Oct 2016 03:00:00 +0200</pubDate>
+      <guid isPermaLink="false">8fe144bbfc292cc6ed0db22c7d6b5ba66cea400c</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/2016-10-17_8fe144bb_s02e07_narkotikamorden_i_malmo__.mp3?awEpisodeId=27135&amp;awCollectionId=441" length="40515616" type="audio/mpeg"/>
+      <itunes:subtitle>Ett par tror att de ska ha en trevlig kväll tillsammans med sina vänner. Men vännerna har någonting helt annat planerat.</itunes:subtitle>
+      <itunes:summary>Ett par tror att de ska ha en trevlig kväll tillsammans med sina vänner. Men vännerna har någonting helt annat planerat.</itunes:summary>
+      <itunes:duration>00:33:45</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>2</itunes:season>
+      <itunes:episode>7</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S02E06 Mordet i Vollsjö</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/2016-10-11_562b296c_mordpodden_s02e06_vollsjo.mp3?awEpisodeId=26872&amp;awCollectionId=441</link>
+      <pubDate>Sun, 16 Oct 2016 03:00:00 +0200</pubDate>
+      <guid isPermaLink="false">562b296c08d1a7da0bb7287115e524c6a66d4a42</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/2016-10-11_562b296c_mordpodden_s02e06_vollsjo.mp3?awEpisodeId=26872&amp;awCollectionId=441" length="40320736" type="audio/mpeg"/>
+      <itunes:subtitle>En ung tjej hittas död och snart uppdagas det att hon under de sista veckorna i livet blivit allt mer rädd för någon i sin närhet.</itunes:subtitle>
+      <itunes:summary>En ung tjej hittas död och snart uppdagas det att hon under de sista veckorna i livet blivit allt mer rädd för någon i sin närhet.</itunes:summary>
+      <itunes:duration>00:33:35</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>2</itunes:season>
+      <itunes:episode>6</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S02E05 Rånmordet i Malmö</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/2016-10-05_9a2a01b8_s02e05_ra__nmordet_i_malmo__.mp3?awEpisodeId=26596&amp;awCollectionId=441</link>
+      <pubDate>Sun, 09 Oct 2016 03:00:00 +0200</pubDate>
+      <guid isPermaLink="false">9a2a01b83cbb5870ff1358ae3aebb889e4f1b04d</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/2016-10-05_9a2a01b8_s02e05_ra__nmordet_i_malmo__.mp3?awEpisodeId=26596&amp;awCollectionId=441" length="40275616" type="audio/mpeg"/>
+      <itunes:subtitle>Två killar kliver in i en restaurang som rånare, men kommer ut som mördare.</itunes:subtitle>
+      <itunes:summary>Två killar kliver in i en restaurang som rånare, men kommer ut som mördare.</itunes:summary>
+      <itunes:duration>00:33:33</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>2</itunes:season>
+      <itunes:episode>5</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S02E04 Hatmordet i Klippan</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/2016-09-28_a0099ee5_s02e04_hatmordet_i_klippan.mp3?awEpisodeId=26149&amp;awCollectionId=441</link>
+      <pubDate>Sun, 02 Oct 2016 01:00:00 +0200</pubDate>
+      <guid isPermaLink="false">a0099ee5f2a23e4a809359ee4ce226982ec8f57f</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/2016-09-28_a0099ee5_s02e04_hatmordet_i_klippan.mp3?awEpisodeId=26149&amp;awCollectionId=441" length="44135776" type="audio/mpeg"/>
+      <itunes:subtitle>1995 mördas en ung kille i Klippans centrum och bara dagar efter mordet blir det tydligt att motivet är rasistiskt.</itunes:subtitle>
+      <itunes:summary>1995 mördas en ung kille i Klippans centrum och bara dagar efter mordet blir det tydligt att motivet är rasistiskt.</itunes:summary>
+      <itunes:duration>00:36:46</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>2</itunes:season>
+      <itunes:episode>4</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S02E03 Mordet i Dalby Stenbrott</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/2016-09-21_d55c04ad_s02e03_dalby.mp3?awEpisodeId=25764&amp;awCollectionId=441</link>
+      <pubDate>Sun, 25 Sep 2016 01:00:00 +0200</pubDate>
+      <guid isPermaLink="false">d55c04ad9120f16705f061a167658f2944a01ef1</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/2016-09-21_d55c04ad_s02e03_dalby.mp3?awEpisodeId=25764&amp;awCollectionId=441" length="38715616" type="audio/mpeg"/>
+      <itunes:subtitle>En man får mardrömmar om att hans familj dör. Mardrömmar som tyvärr förverkligas.</itunes:subtitle>
+      <itunes:summary>En man får mardrömmar om att hans familj dör. Mardrömmar som tyvärr förverkligas.</itunes:summary>
+      <itunes:duration>00:32:15</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>2</itunes:season>
+      <itunes:episode>3</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S02E02 Sjukhusmorden i Malmö</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/2016-09-15_fdd38f55_s02e02_sjukhusmorden.mp3?awEpisodeId=25448&amp;awCollectionId=441</link>
+      <pubDate>Sun, 18 Sep 2016 03:00:00 +0200</pubDate>
+      <guid isPermaLink="false">fdd38f55b50a2d965388c5b554405214f20dae90</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/2016-09-15_fdd38f55_s02e02_sjukhusmorden.mp3?awEpisodeId=25448&amp;awCollectionId=441" length="41125696" type="audio/mpeg"/>
+      <itunes:subtitle>En seriemördare härjar på en långvårdsavdelning i staden.</itunes:subtitle>
+      <itunes:summary>En seriemördare härjar på en långvårdsavdelning i staden.</itunes:summary>
+      <itunes:duration>00:34:16</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>2</itunes:season>
+      <itunes:episode>2</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S02E01 Dubbelmordet På Hallandsåsen</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/2016-09-09_e117d3a1_2016_09_06_e117d3a1_mordpodden_s02e01.mp3?awEpisodeId=25113&amp;awCollectionId=441</link>
+      <pubDate>Sun, 11 Sep 2016 00:01:00 +0200</pubDate>
+      <guid isPermaLink="false">e117d3a153fc71487c0cae098b01866b8dfdbf6e</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/2016-09-09_e117d3a1_2016_09_06_e117d3a1_mordpodden_s02e01.mp3?awEpisodeId=25113&amp;awCollectionId=441" length="40016896" type="audio/mpeg"/>
+      <itunes:subtitle>En märklig trafikolycka visar sig istället vara ett brutalt mord.</itunes:subtitle>
+      <itunes:summary>En märklig trafikolycka visar sig istället vara ett brutalt mord.</itunes:summary>
+      <itunes:duration>00:33:20</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>2</itunes:season>
+      <itunes:episode>1</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S01E08. Lex Bobby-Fallet Utanför Nässjö</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/2016-06-10_c6a80016_mordpodden_s01e08_lex_bobby_fallet_.mp3?awEpisodeId=21140&amp;awCollectionId=441</link>
+      <pubDate>Sat, 11 Jun 2016 23:59:00 +0200</pubDate>
+      <guid isPermaLink="false">c6a8001687993025c4ba92c11a0777c9c3306396</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/2016-06-10_c6a80016_mordpodden_s01e08_lex_bobby_fallet_.mp3?awEpisodeId=21140&amp;awCollectionId=441" length="85597696" type="audio/mpeg"/>
+      <itunes:subtitle>En pojke försvinner utanför Göteborg &amp; hittas på botten av en sjö utanför Jönköping.</itunes:subtitle>
+      <itunes:summary>En pojke försvinner utanför Göteborg &amp; hittas på botten av en sjö utanför Jönköping.</itunes:summary>
+      <itunes:duration>00:35:39</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>8</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S01E07 Studentmordet i Jönköping</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/2016-06-07_8cb31ffa_mordpodden_s01e07_studentmordet_i_jonkoping.mp3?awEpisodeId=20881&amp;awCollectionId=441</link>
+      <pubDate>Sat, 04 Jun 2016 21:32:00 +0200</pubDate>
+      <guid isPermaLink="false">http://mordpodden.com/?p=240</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/2016-06-07_8cb31ffa_mordpodden_s01e07_studentmordet_i_jonkoping.mp3?awEpisodeId=20881&amp;awCollectionId=441" length="79467136" type="audio/mpeg"/>
+      <itunes:subtitle>Under hösten 2007 åker en ambulans ut till ett studentboende i Jönköping. En ung man har hoppat från fjärde våningen. Men det är inte det enda som står fel till. I killens korridorsrum återfinns nämligen en ung kvinna och hon andas inte.</itunes:subtitle>
+      <itunes:summary>Under hösten 2007 åker en ambulans ut till ett studentboende i Jönköping. En ung man har hoppat från fjärde våningen. Men det är inte det enda som står fel till. I killens korridorsrum återfinns nämligen en ung kvinna och hon andas inte.</itunes:summary>
+      <itunes:duration>00:33:06</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>7</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S01E06 Mordbränderna på Norra Öland</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/2016-05-31_59fff4ad_s01e06_oland.mp3?awEpisodeId=20478&amp;awCollectionId=441</link>
+      <pubDate>Sat, 28 May 2016 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">http://mordpodden.com/?p=211</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/2016-05-31_59fff4ad_s01e06_oland.mp3?awEpisodeId=20478&amp;awCollectionId=441" length="72727936" type="audio/mpeg"/>
+      <itunes:subtitle>År 2005 brinner en man inne i Getterum på Norra Öland och ordet "mordbrand&amp;" börjar snart viskas bland invånarna. Men det var inte den första branden och det skulle bli långt ifrån den sista.</itunes:subtitle>
+      <itunes:summary>År 2005 brinner en man inne i Getterum på Norra Öland och ordet "mordbrand&amp;" börjar snart viskas bland invånarna. Men det var inte den första branden och det skulle bli långt ifrån den sista.</itunes:summary>
+      <itunes:duration>00:30:18</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>6</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S01E05 Tältmordet i Orrefors</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/2016-06-08_4a18bbd8_s01e05_tc3a4ltmordet_i_orrefors.mp3?awEpisodeId=20477&amp;awCollectionId=441</link>
+      <pubDate>Sat, 21 May 2016 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">4a18bbd8112734530ce67aa98cfe834c5adba9d9</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/2016-06-08_4a18bbd8_s01e05_tc3a4ltmordet_i_orrefors.mp3?awEpisodeId=20477&amp;awCollectionId=441" length="80107456" type="audio/mpeg"/>
+      <itunes:subtitle>År 2000 krossas idyllen i Orrefors när en 10-årig flicka mördas. Men ingen vet vem det är som har gjort det. Samtidigt händer en rad andra obehagliga händelser i bygden. Kunde det finnas ett samband?</itunes:subtitle>
+      <itunes:summary>År 2000 krossas idyllen i Orrefors när en 10-årig flicka mördas. Men ingen vet vem det är som har gjort det. Samtidigt händer en rad andra obehagliga händelser i bygden. Kunde det finnas ett samband?</itunes:summary>
+      <itunes:duration>00:33:22</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>5</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S01E04 Taximordet utanför Kalmar</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/2016-05-31_52015c73_s01e04taximordet.mp3?awEpisodeId=20476&amp;awCollectionId=441</link>
+      <pubDate>Sat, 14 May 2016 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">http://mordpodden.com/?p=191</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/2016-05-31_52015c73_s01e04taximordet.mp3?awEpisodeId=20476&amp;awCollectionId=441" length="82726336" type="audio/mpeg"/>
+      <itunes:subtitle>1991 försvinner en trebarnsmamma spårlöst i Stockholm. Polisinsatserna drar tidigt igång men det man finner förbryllar. Någon har bevakat kvinnans alla steg de närmaste veckorna och spåren skulle snart komma att leda dem till både Paris och Småland.</itunes:subtitle>
+      <itunes:summary>1991 försvinner en trebarnsmamma spårlöst i Stockholm. Polisinsatserna drar tidigt igång men det man finner förbryllar. Någon har bevakat kvinnans alla steg de närmaste veckorna och spåren skulle snart komma att leda dem till både Paris och Småland.</itunes:summary>
+      <itunes:duration>00:34:28</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>4</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S01E03 Modellmordet utanför Växjö</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/2016-05-31_558a531a_s01e03_modellmordet.mp3?awEpisodeId=20471&amp;awCollectionId=441</link>
+      <pubDate>Sat, 07 May 2016 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">http://mordpodden.com/?p=182</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/2016-05-31_558a531a_s01e03_modellmordet.mp3?awEpisodeId=20471&amp;awCollectionId=441" length="80742016" type="audio/mpeg"/>
+      <itunes:subtitle>En 17-årig flicka har under hela sitt liv drömt om att stå i rampljuset. En dag plingar det till i Facebook-inkorgen. Det är en man som säger sig kunna uppfylla hennes dröm om att bli modell. Men mannen skulle visa sig ha helt andra avsikter.</itunes:subtitle>
+      <itunes:summary>En 17-årig flicka har under hela sitt liv drömt om att stå i rampljuset. En dag plingar det till i Facebook-inkorgen. Det är en man som säger sig kunna uppfylla hennes dröm om att bli modell. Men mannen skulle visa sig ha helt andra avsikter.</itunes:summary>
+      <itunes:duration>00:33:38</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>3</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S01E02 Hedersmordet i Högsby</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/2016-05-31_bad8d872_hedersmordet_s01e02.mp3?awEpisodeId=20470&amp;awCollectionId=441</link>
+      <pubDate>Sat, 30 Apr 2016 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">http://mordpodden.com/?p=175</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/2016-05-31_bad8d872_hedersmordet_s01e02.mp3?awEpisodeId=20470&amp;awCollectionId=441" length="82999936" type="audio/mpeg"/>
+      <itunes:subtitle>2005 skakas det lilla samhället Högsby av något ofattbart, ett hedersmord. Den kärlekshistoria som månader innan hade blomstrat mellan 16-åriga Samira och 20-årige Abbas fick ett ofattbart sorgligt slut. Men allting var inte som det såg ut. Hade de verkli</itunes:subtitle>
+      <itunes:summary>2005 skakas det lilla samhället Högsby av något ofattbart, ett hedersmord. Den kärlekshistoria som månader innan hade blomstrat mellan 16-åriga Samira och 20-årige Abbas fick ett ofattbart sorgligt slut. Men allting var inte som det såg ut. Hade de verkliga gärningsmännen verkligen fått sitt straff?</itunes:summary>
+      <itunes:duration>00:34:34</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>2</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+    <item>
+      <title>S01E01 Familjemordet i Norra Förlösa</title>
+      <link>https://ads-e-bauerse-pods.sharp-stream.com/441/2016-05-31_88d47ff0_mordpoddens01e01forlosa_48k32b.mp3?awEpisodeId=20469&amp;awCollectionId=441</link>
+      <pubDate>Mon, 25 Apr 2016 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">http://mordpodden.com/?p=139</guid>
+      <enclosure url="https://ads-e-bauerse-pods.sharp-stream.com/441/2016-05-31_88d47ff0_mordpoddens01e01forlosa_48k32b.mp3?awEpisodeId=20469&amp;awCollectionId=441" length="48260192" type="audio/mpeg"/>
+      <itunes:subtitle>En man försvinner spårlöst från sitt hem i Norra Förlösa 2012. Två år senare hittas han mördad bara några  hundra meter ifrån sitt hus. Någon hade lyckats lura både polisen, Missing People och människorna i närområdet. Men precis som vanligt smyger sig sa</itunes:subtitle>
+      <itunes:summary>En man försvinner spårlöst från sitt hem i Norra Förlösa 2012. Två år senare hittas han mördad bara några  hundra meter ifrån sitt hus. Någon hade lyckats lura både polisen, Missing People och människorna i närområdet. Men precis som vanligt smyger sig sanningen alltid fram till slut.</itunes:summary>
+      <itunes:duration>00:33:30</itunes:duration>
+      <itunes:type>FULL</itunes:type>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>1</itunes:episode>
+      <itunes:author>RadioPlay</itunes:author>
+    </item>
+  </channel>
+</rss>

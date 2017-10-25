@@ -16,7 +16,7 @@ namespace Data
             {
                 string folderName = category;
 
-                System.IO.Directory.CreateDirectory(folderName);
+                Directory.CreateDirectory(folderName);
                 return true;
             }
             catch (Exception e)

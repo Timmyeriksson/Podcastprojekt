@@ -14,3 +14,4 @@ C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Data\obj\Debug\Data.csprojResolv
 C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
 C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Data\obj\Debug\Data.dll
 C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Data\obj\Debug\Data.pdb
+C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache

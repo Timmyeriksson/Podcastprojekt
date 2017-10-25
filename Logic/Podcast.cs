@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Xml;
 using System.ServiceModel.Syndication;
+using System.Threading;
 
 namespace Logic
 {
@@ -19,6 +20,8 @@ namespace Logic
         public string Interval { get; set; }
         public string Description { get; set; }
         List<Podcast> pods = new List<Podcast>();
+
+
         public void PodInfo(string name, string url, string category, string interval)
         {
             RssReader rss = new RssReader();

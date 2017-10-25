@@ -39,3 +39,8 @@ C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Presentation\obj\Debug\Presentat
 C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Presentation\obj\Debug\Presentation.csproj.CoreCompileInputs.cache
 C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Presentation\obj\Debug\Presentation.exe
 C:\Users\Timmy\Desktop\dethärärettfakeprojekt\Presentation\obj\Debug\Presentation.pdb
+C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Presentation\obj\Debug\Interop.WMPLib.dll
+C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Presentation\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Presentation\obj\Debug\Presentation.csproj.ResolveComReference.cache
+C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Presentation\bin\Debug\Interop.WMPLib.dll
+C:\Users\Ola Vognild\Desktop\C#\Podcastprojekt\Presentation\bin\Debug\AxInterop.WMPLib.dll

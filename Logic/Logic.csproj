@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Category.cs" />
+    <Compile Include="Edit.cs" />
     <Compile Include="Episodes.cs" />
     <Compile Include="Feed.cs" />
     <Compile Include="Podcast.cs" />

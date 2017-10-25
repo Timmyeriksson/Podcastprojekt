@@ -11,6 +11,7 @@ using System.Xml;
 using Logic;
 using System.IO;
 using System.Diagnostics;
+using System.Threading;
 
 namespace Presentation
 {
@@ -20,6 +21,7 @@ namespace Presentation
         Feed feed = new Feed();
         Podcast pod = new Podcast();
         Episodes episode = new Episodes();
+        Edit edit = new Edit();
 
         public MainWindow()
         {
@@ -115,18 +117,28 @@ namespace Presentation
         }
 
 
-        private void btn_add_podcast_Click(object sender, EventArgs e)
+        public void AddPod()
         {
+            
+
             if (Validation.tfNotEmpty(txtBox_new_pod, "Podcast name ") && Validation.tfNotEmpty(txtBox_url, "URL ") && Validation.categoryBoxNotEmpty(cb_category) && Validation.intervalBoxNotEmpty(cb_interval, lb_podcast))
             {
                 var podName = txtBox_new_pod.Text;
                 var url = txtBox_url.Text;
                 var category = cb_category.SelectedItem.ToString();
                 var interval = cb_interval.SelectedItem.ToString();
-                pod.PodInfo(podName, url, category, interval);
-            }
+
+
+                pod.PodInfo(podName, url, category, interval);            }
+            
         }
 
+        private async void btn_add_podcast_Click(object sender, EventArgs e)
+        {
+
+            AddPod();
+
+        }
         private void lb_category_MouseClick(object sender, MouseEventArgs e)
         {
             lb_podcast.Items.Clear();
@@ -148,10 +160,9 @@ namespace Presentation
 
         private void btn_play_podcast_Click(object sender, EventArgs e)
         {
-            var selected = clb_episodes.SelectedItem.ToString();
-            var url = episode.getUrl(selected);
 
-            Process.Start(url);
+
+           // Process.Start(url);
         }
 
         private void clb_episodes_MouseClick_1(object sender, MouseEventArgs e)
@@ -168,6 +179,37 @@ namespace Presentation
             feed.Remove(category, name);
             lb_podcast.Items.Clear();
             fillPodcastList(lb_category.Text, lb_podcast);
+        }
+
+        private void btn_edit_category_Click(object sender, EventArgs e)
+        {
+            edit.EditCategory(lb_category, txtBox_edit_category);
+            lb_category.Items.Clear();
+            cb_category.Items.Clear();
+            FillCategoryList();
+
+        }
+
+        private void btn_edit_podcast_name_Click(object sender, EventArgs e)
+        {
+            edit.EditPod(lb_category, lb_podcast, txtBox_new_pod);
+            lb_category.Items.Clear();
+            cb_category.Items.Clear();
+            lb_podcast.Items.Clear();
+            FillCategoryList();
+        }
+
+        private void lbl_podcast_name_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        {
+            var selected = clb_episodes.SelectedItem.ToString();
+            var url = episode.getUrl(selected);
+
+            axWindowsMediaPlayer1.URL = url;
         }
     }
 }
