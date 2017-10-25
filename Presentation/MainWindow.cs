@@ -136,10 +136,14 @@ namespace Presentation
 
         private void lb_podcast_MouseClick(object sender, MouseEventArgs e)
         {
-            clb_episodes.Items.Clear();
-            var category = lb_category.SelectedItem.ToString();
-            var prePath = lb_podcast.SelectedItem.ToString();
-            episode.getEpisodes(category, prePath, clb_episodes);
+            if (lb_podcast.SelectedItem != null)
+            {
+                clb_episodes.Items.Clear();
+                var category = lb_category.SelectedItem.ToString();
+                var prePath = lb_podcast.SelectedItem.ToString();
+                episode.getEpisodes(category, prePath, clb_episodes);
+            }
+
         }
 
         private void btn_play_podcast_Click(object sender, EventArgs e)
