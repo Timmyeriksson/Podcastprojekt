@@ -9,6 +9,9 @@ namespace Logic
 {
     public class Validation
     {
+
+
+
         public static bool tfNotEmpty(TextBox field, string label)
         {
             if (field.Text == "")
@@ -75,11 +78,13 @@ namespace Logic
             }
         }
 
-        public static bool listBoxNotEmpty(ListBox list)
+
+
+        public static bool delete(ListBox list)
         {
-            if (list.Text == "")
+           if (list.Text == "")
             {
-                MessageBox.Show("Please choose a podcast to delete from the podcast list");
+                MessageBox.Show("Please choose an item to delete");
                 list.Focus();
                 return false;
             }

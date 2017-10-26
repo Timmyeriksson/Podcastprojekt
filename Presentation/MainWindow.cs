@@ -32,7 +32,7 @@ namespace Presentation
 
         private void btn_delete_category_Click(object sender, EventArgs e)
         {
-            if (Validation.listBoxNotEmpty(lb_category))
+            if (Validation.delete(lb_category))
             {
                 var confirm = MessageBox.Show("Do you want to delete the category?", "Delete Category", MessageBoxButtons.YesNo);
 
@@ -166,17 +166,29 @@ namespace Presentation
             var name = clb_episodes.SelectedItem.ToString();
             episode.getDescription(name, richtb_description);
         }
-        
+
 
         private void btn_delete_podcast_MouseClick(object sender, MouseEventArgs e)
         {
-            var category = lb_category.SelectedItem.ToString();
-            var name = lb_podcast.SelectedItem.ToString();
+            if (Validation.delete(lb_podcast))
+            {
 
-            feed.Remove(category, name);
-            lb_podcast.Items.Clear();
+                var confirm = MessageBox.Show("Do you want to delete this podcast?", "Delete Podcast", MessageBoxButtons.YesNo);
 
-            fillPodcastList(lb_category.Text, lb_podcast);
+                if (confirm == DialogResult.Yes)
+                {
+                    {
+                        var category = lb_category.SelectedItem.ToString();
+                        var name = lb_podcast.SelectedItem.ToString();
+
+                        feed.Remove(category, name);
+                        lb_podcast.Items.Clear();
+
+                        fillPodcastList(lb_category.Text, lb_podcast);
+                    }
+                }
+            }
+
 
         }
 
@@ -221,6 +233,11 @@ namespace Presentation
             lb_podcast.Items.Clear();
             clb_episodes.Items.Clear();
             FillCategoryList();
+        }
+
+        private void btn_delete_podcast_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
