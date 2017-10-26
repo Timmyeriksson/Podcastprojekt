@@ -40,7 +40,7 @@ namespace Logic
             var fileName = pod.SelectedItem.ToString();
             string currentName = Directory.GetCurrentDirectory() + @"\" + category + @"\" + fileName + ".xml";
 
-            /*Ny kategori*/ var file = newCat.SelectedItem.ToString();
+            /* Ny kategori */ var file = newCat.SelectedItem.ToString();
             string newPath = Directory.GetCurrentDirectory() + @"\" + file + @"\" + fileName + ".xml";
 
             Directory.Move(currentName, newPath);

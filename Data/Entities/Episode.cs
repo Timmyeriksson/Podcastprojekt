@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Data.Enteties
 {
-   public class Episode
+   public class Episode : AbstractClass
     {
         public string Title { get; set; }
         public string Url { get; set; }

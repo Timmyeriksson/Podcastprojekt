@@ -135,7 +135,7 @@ namespace Presentation
 
         private async void btn_add_podcast_Click(object sender, EventArgs e)
         {
-
+            
             AddPod();
 
         }
@@ -161,8 +161,10 @@ namespace Presentation
         private void btn_play_podcast_Click(object sender, EventArgs e)
         {
 
+            var selected = clb_episodes.SelectedItem.ToString();
+            var url = episode.getUrl(selected);
 
-           // Process.Start(url);
+            Process.Start(url);
         }
 
         private void clb_episodes_MouseClick_1(object sender, MouseEventArgs e)
@@ -171,6 +173,7 @@ namespace Presentation
             var name = clb_episodes.SelectedItem.ToString();
             episode.getDescription(name, richtb_description);
         }
+        
 
         private void btn_delete_podcast_MouseClick(object sender, MouseEventArgs e)
         {
@@ -179,7 +182,9 @@ namespace Presentation
             feed.Remove(category, name);
             lb_podcast.Items.Clear();
             fillPodcastList(lb_category.Text, lb_podcast);
+
         }
+
 
         private void btn_edit_category_Click(object sender, EventArgs e)
         {
@@ -206,16 +211,24 @@ namespace Presentation
         }
 
         private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
-        {
-            var selected = clb_episodes.SelectedItem.ToString();
-            var url = episode.getUrl(selected);
-
-            axWindowsMediaPlayer1.URL = url;
+        { 
         }
 
         private void btn_edit_pod_location_Click(object sender, EventArgs e)
         {
             edit.EditLocation(lb_category, lb_podcast, cb_category);
+            lb_category.Items.Clear();
+            cb_category.Items.Clear();
+            lb_podcast.Items.Clear();
+            clb_episodes.Items.Clear();
+            FillCategoryList();
+        }
+
+        private void btn_edit_podcast_url_Click(object sender, EventArgs e)
+        {
+
+
+
             lb_category.Items.Clear();
             cb_category.Items.Clear();
             lb_podcast.Items.Clear();
