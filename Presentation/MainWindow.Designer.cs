@@ -244,7 +244,6 @@
             this.lbl_podcast_name.Size = new System.Drawing.Size(130, 13);
             this.lbl_podcast_name.TabIndex = 24;
             this.lbl_podcast_name.Text = "Podcast name to add/edit";
-            this.lbl_podcast_name.Click += new System.EventHandler(this.lbl_podcast_name_Click);
             // 
             // cb_category
             // 

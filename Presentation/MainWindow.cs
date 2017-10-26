@@ -117,9 +117,8 @@ namespace Presentation
         }
 
 
-        public void AddPod()
+        private void btn_add_podcast_Click(object sender, EventArgs e)
         {
-            
 
             if (Validation.tfNotEmpty(txtBox_new_pod, "Podcast name ") && Validation.tfNotEmpty(txtBox_url, "URL ") && Validation.categoryBoxNotEmpty(cb_category) && Validation.intervalBoxNotEmpty(cb_interval, lb_podcast))
             {
@@ -129,14 +128,8 @@ namespace Presentation
                 var interval = cb_interval.SelectedItem.ToString();
 
 
-                pod.PodInfo(podName, url, category, interval);            }
-            
-        }
-
-        private async void btn_add_podcast_Click(object sender, EventArgs e)
-        {
-            
-            AddPod();
+                pod.PodInfo(podName, url, category, interval);
+            }
 
         }
         private void lb_category_MouseClick(object sender, MouseEventArgs e)
@@ -179,16 +172,18 @@ namespace Presentation
         {
             var category = lb_category.SelectedItem.ToString();
             var name = lb_podcast.SelectedItem.ToString();
+
             feed.Remove(category, name);
             lb_podcast.Items.Clear();
+
             fillPodcastList(lb_category.Text, lb_podcast);
 
         }
 
 
-        private void btn_edit_category_Click(object sender, EventArgs e)
+        private async void btn_edit_category_Click(object sender, EventArgs e)
         {
-            edit.EditCategory(lb_category, txtBox_edit_category);
+            await edit.EditCategory(lb_category, txtBox_edit_category);
             lb_category.Items.Clear();
             cb_category.Items.Clear();
             FillCategoryList();
@@ -205,14 +200,6 @@ namespace Presentation
             FillCategoryList();
         }
 
-        private void lbl_podcast_name_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
-        { 
-        }
 
         private void btn_edit_pod_location_Click(object sender, EventArgs e)
         {

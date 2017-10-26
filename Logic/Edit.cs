@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -10,7 +11,7 @@ namespace Logic
 {
     public class Edit
     {
-        public void EditCategory(ListBox list, TextBox text)
+        public Task EditCategory(ListBox list, TextBox text)
         {
             var category = list.SelectedItem.ToString();
             string categoryName = Directory.GetCurrentDirectory() + @"\" + category;
@@ -18,7 +19,11 @@ namespace Logic
             string newCat = text.Text;
             string newPath = Directory.GetCurrentDirectory() + @"\" + newCat;
 
-            Directory.Move(categoryName, newPath);
+            return Task.Factory.StartNew(() =>
+            {
+                Directory.Move(categoryName, newPath);
+            });
+               
         }
 
         public void EditPod(ListBox cat, ListBox file, TextBox text)
