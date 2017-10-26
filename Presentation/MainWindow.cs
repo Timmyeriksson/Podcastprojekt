@@ -136,6 +136,7 @@ namespace Presentation
         {
             lb_podcast.Items.Clear();
             clb_episodes.Items.Clear();
+            richtb_description.Clear();
             fillPodcastList(lb_category.Text, lb_podcast);
         }
 
@@ -144,18 +145,20 @@ namespace Presentation
             if (lb_podcast.SelectedItem != null)
             {
                 clb_episodes.Items.Clear();
+                richtb_description.Clear();
                 var category = lb_category.SelectedItem.ToString();
                 var prePath = lb_podcast.SelectedItem.ToString();
                 episode.getEpisodes(category, prePath, clb_episodes);
+                episode.setPlayed(category, prePath, clb_episodes);
             }
 
         }
 
         private void btn_play_podcast_Click(object sender, EventArgs e)
         {
-
-            var selected = clb_episodes.SelectedItem.ToString();
-            var url = episode.getUrl(selected);
+            string url;
+            episode.getPodcastUrl(lb_category.SelectedItem.ToString(), lb_podcast.SelectedItem.ToString(), clb_episodes.SelectedItem.ToString(), out url);
+            episode.setPlayed(lb_category.SelectedItem.ToString(), lb_podcast.SelectedItem.ToString(), clb_episodes);
 
             Process.Start(url);
         }
@@ -163,8 +166,10 @@ namespace Presentation
         private void clb_episodes_MouseClick_1(object sender, MouseEventArgs e)
         {
             richtb_description.Clear();
-            var name = clb_episodes.SelectedItem.ToString();
-            episode.getDescription(name, richtb_description);
+            var category = lb_category.SelectedItem.ToString();
+            var name = lb_podcast.SelectedItem.ToString();
+            var chosenEp = clb_episodes.SelectedItem.ToString();
+            episode.getDescription(category, name, chosenEp, richtb_description);
         }
 
 

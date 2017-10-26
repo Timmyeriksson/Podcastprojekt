@@ -14,82 +14,89 @@ namespace Logic
 {
     public class Episodes
     {
+        Episode eps = new Episode();
+        Podcast pods = new Podcast();
         List<Episode> episodes = new List<Episode>();
+
         public void getEpisodes(string category, string prePath, CheckedListBox chlBox)
         {
-            var path = Directory.GetCurrentDirectory() + @"\" + category + @"\" + prePath + @".xml";
+            string path = Directory.GetCurrentDirectory() + @"\" + category + @"\" + prePath + @".xml";
 
-            var xml = XmlReader.Create(path);
-            var feed = SyndicationFeed.Load(xml);
-            xml.Close();
+            XmlDocument xdcDocument = new XmlDocument();
+            xdcDocument.Load(path);
 
-
-            if (episodes.Count == 0)
+            foreach (XmlNode xndNode in xdcDocument.DocumentElement.SelectNodes("item"))
             {
-                foreach (var episode in feed.Items)
-                {
-                    var pod = new Episode()
-                    {
-                        Title = episode.Title.Text,
-                        Description = episode.Summary.Text,
-                        ListenedTo = false
-                    };
-                    foreach (var link in episode.Links)
-                    {
-                        pod.Url = link.Uri.OriginalString;
-                        continue;
-                    }
-                    episodes.Add(pod);
-                }
-                foreach (var item in episodes)
-                {
-                    chlBox.Items.Add(item, false);
-                }
+                var title = xndNode.SelectSingleNode("title");
+                var titlestring = title.ToString();
+                chlBox.Items.Add(title.InnerText);
             }
-            else
+        }
+        public void setPlayed(string category, string name, CheckedListBox chlBox)
+        {
+            string path = Directory.GetCurrentDirectory() + @"\" + category + @"\" + name + @".xml";
+
+            XmlDocument xdcDocument = new XmlDocument();
+            xdcDocument.Load(path);
+
+            int i = 0;
+
+            foreach (XmlNode xndNode in xdcDocument.DocumentElement.SelectNodes("item"))
             {
-                episodes.Clear();
-                foreach (var episode in feed.Items)
+                var title = xndNode.SelectSingleNode("title");
+
+                var status = xndNode.SelectSingleNode("status");
+
+                if (status.InnerText.Equals("Listened to."))
                 {
-                    var pod = new Episode()
-                    {
-                        Title = episode.Title.Text,
-                        Description = episode.Summary.Text,
-                        ListenedTo = false
-                    };
-                    foreach (var link in episode.Links)
-                    {
-                        pod.Url = link.Uri.OriginalString;
-                        continue;
-                    }
-                    episodes.Add(pod);
+                    chlBox.SetItemChecked(i, true);
                 }
-                foreach (var item in episodes)
+                i++;
+            }
+        }
+
+        public void getDescription(string category, string name, string chosenEp, RichTextBox textBox)
+        {
+            string path = Directory.GetCurrentDirectory() + @"\" + category + @"\" + name + @".xml";
+
+            XmlDocument xdcDocument = new XmlDocument();
+            xdcDocument.Load(path);
+
+            foreach (XmlNode xndNode in xdcDocument.DocumentElement.SelectNodes("item"))
+            {
+                var title = xndNode.SelectSingleNode("title");
+                if (chosenEp.Equals(title.InnerText))
                 {
-                    chlBox.Items.Add(item, false);
+                    var description = xndNode.SelectSingleNode("description");
+                    textBox.Text = description.InnerText;
                 }
             }
         }
 
-        public void getDescription(string name, RichTextBox richtb)
+        public void getPodcastUrl(string category, string namn, string selectedPod, out string url)
         {
+            XmlDocument xml = new XmlDocument();
 
-            var desc = from x in episodes
-                       where x.Title == name
-                       select x.Description;
+            string[] minArray = selectedPod.Split('(');
+            string selected = minArray[0];
 
-            richtb.AppendText(desc.Single().ToString());
+            string path = Directory.GetCurrentDirectory() + @"\" + category + @"\" + namn + @".xml";
+            xml.Load(path);
 
-        }
+            url = "";
 
-        public string getUrl(string episode)
-        {
-
-            var query = from c in episodes
-                        where c.Title == episode
-                        select c.Url;
-
-            return query.Single().ToString();
+            foreach (XmlNode node in xml.DocumentElement.SelectNodes("item"))
+            {
+                XmlNode enclosure = node.SelectSingleNode("enclosure");
+                XmlNode title = node.SelectSingleNode("title");
+                XmlNode status = node.SelectSingleNode("status");
+                if (title.InnerText.Equals(selected))
+                {
+                    url = enclosure.InnerText;
+                    status.InnerText = "Listened to.";
+                    xml.Save(path);
+                }
+            }
         }
     }
 }

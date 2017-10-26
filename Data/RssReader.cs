@@ -11,15 +11,17 @@ namespace Data
 {
     public class RssReader
     {
-        public void ReadRSS(string name, string url, string category)
-        {   
-            using (var client = new WebClient())
+        public XmlDocument ReadRSS(string urlString)
+        {
+            var xml = "";
+            using (var client = new System.Net.WebClient())
             {
-                string path = Directory.GetCurrentDirectory() + @"\" + category + @"\" + name + ".xml";
-                client.DownloadFile(url, path);
-                client.Dispose();
+                client.Encoding = Encoding.UTF8;
+                xml = client.DownloadString(urlString);
             }
-
+            XmlDocument dom = new XmlDocument();
+            dom.LoadXml(xml);
+            return dom;
         }
 
 
