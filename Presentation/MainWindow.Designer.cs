@@ -282,7 +282,7 @@
             // 
             this.clb_episodes.FormattingEnabled = true;
             this.clb_episodes.Location = new System.Drawing.Point(405, 140);
-            this.clb_episodes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.clb_episodes.Margin = new System.Windows.Forms.Padding(2);
             this.clb_episodes.Name = "clb_episodes";
             this.clb_episodes.Size = new System.Drawing.Size(151, 139);
             this.clb_episodes.TabIndex = 28;
@@ -294,8 +294,9 @@
             this.btn_edit_pod_location.Name = "btn_edit_pod_location";
             this.btn_edit_pod_location.Size = new System.Drawing.Size(80, 38);
             this.btn_edit_pod_location.TabIndex = 29;
-            this.btn_edit_pod_location.Text = "Edit podcast location";
+            this.btn_edit_pod_location.Text = "Edit podcast category";
             this.btn_edit_pod_location.UseVisualStyleBackColor = true;
+            this.btn_edit_pod_location.Click += new System.EventHandler(this.btn_edit_pod_location_Click);
             // 
             // btn_edit_podcast_url
             // 
@@ -328,7 +329,7 @@
             // richtb_description
             // 
             this.richtb_description.Location = new System.Drawing.Point(579, 140);
-            this.richtb_description.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richtb_description.Margin = new System.Windows.Forms.Padding(2);
             this.richtb_description.Name = "richtb_description";
             this.richtb_description.ReadOnly = true;
             this.richtb_description.Size = new System.Drawing.Size(237, 140);

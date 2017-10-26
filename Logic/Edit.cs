@@ -33,5 +33,17 @@ namespace Logic
 
             Directory.Move(currentName, newPath);
         }
+
+        public void EditLocation(ListBox cat, ListBox pod, ComboBox newCat)
+        {
+            var category = cat.SelectedItem.ToString();
+            var fileName = pod.SelectedItem.ToString();
+            string currentName = Directory.GetCurrentDirectory() + @"\" + category + @"\" + fileName + ".xml";
+
+            /*Ny kategori*/ var file = newCat.SelectedItem.ToString();
+            string newPath = Directory.GetCurrentDirectory() + @"\" + file + @"\" + fileName + ".xml";
+
+            Directory.Move(currentName, newPath);
+        }
     }
 }

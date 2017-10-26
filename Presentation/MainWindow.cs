@@ -196,6 +196,7 @@ namespace Presentation
             lb_category.Items.Clear();
             cb_category.Items.Clear();
             lb_podcast.Items.Clear();
+            clb_episodes.Items.Clear();
             FillCategoryList();
         }
 
@@ -210,6 +211,16 @@ namespace Presentation
             var url = episode.getUrl(selected);
 
             axWindowsMediaPlayer1.URL = url;
+        }
+
+        private void btn_edit_pod_location_Click(object sender, EventArgs e)
+        {
+            edit.EditLocation(lb_category, lb_podcast, cb_category);
+            lb_category.Items.Clear();
+            cb_category.Items.Clear();
+            lb_podcast.Items.Clear();
+            clb_episodes.Items.Clear();
+            FillCategoryList();
         }
     }
 }
