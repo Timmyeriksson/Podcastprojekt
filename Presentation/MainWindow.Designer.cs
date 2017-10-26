@@ -278,6 +278,7 @@
             // clb_episodes
             // 
             this.clb_episodes.FormattingEnabled = true;
+            this.clb_episodes.IntegralHeight = false;
             this.clb_episodes.Location = new System.Drawing.Point(404, 192);
             this.clb_episodes.Margin = new System.Windows.Forms.Padding(2);
             this.clb_episodes.Name = "clb_episodes";

@@ -26,6 +26,42 @@ namespace Logic
             }
         }
 
+
+
+
+
+        public static bool listBoxEmpty(ListBox box)
+        {
+
+            if (box.Text == "")
+            {
+                MessageBox.Show("Please choose an item to update");
+                box.Focus();
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+        }
+
+        public static bool clbEmpty(CheckedListBox box)
+        {
+
+            if (box.Text == "")
+            {
+                MessageBox.Show("Please choose an episode to play");
+                box.Focus();
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+        }
+
         public static bool checkValidURL(string url)
         {
             try
@@ -82,7 +118,7 @@ namespace Logic
 
         public static bool delete(ListBox list)
         {
-           if (list.Text == "")
+            if (list.Text == "")
             {
                 MessageBox.Show("Please choose an item to delete");
                 list.Focus();

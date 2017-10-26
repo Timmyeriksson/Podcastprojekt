@@ -156,11 +156,15 @@ namespace Presentation
 
         private void btn_play_podcast_Click(object sender, EventArgs e)
         {
-            string url;
-            episode.getPodcastUrl(lb_category.SelectedItem.ToString(), lb_podcast.SelectedItem.ToString(), clb_episodes.SelectedItem.ToString(), out url);
-            episode.setPlayed(lb_category.SelectedItem.ToString(), lb_podcast.SelectedItem.ToString(), clb_episodes);
+            if (Validation.clbEmpty(clb_episodes))
+            {
+                string url;
+                episode.getPodcastUrl(lb_category.SelectedItem.ToString(), lb_podcast.SelectedItem.ToString(), clb_episodes.SelectedItem.ToString(), out url);
+                episode.setPlayed(lb_category.SelectedItem.ToString(), lb_podcast.SelectedItem.ToString(), clb_episodes);
 
-            Process.Start(url);
+                Process.Start(url);
+            }
+            
         }
 
         private void clb_episodes_MouseClick_1(object sender, MouseEventArgs e)
@@ -200,32 +204,73 @@ namespace Presentation
 
         private async void btn_edit_category_Click(object sender, EventArgs e)
         {
-            await edit.EditCategory(lb_category, txtBox_edit_category);
-            lb_category.Items.Clear();
-            cb_category.Items.Clear();
-            FillCategoryList();
+
+            if (Validation.listBoxEmpty(lb_category) && Validation.tfNotEmpty(txtBox_edit_category, "Category name "))
+            {
+                var cat = lb_category.SelectedItem.ToString();
+                var confirm = MessageBox.Show("Do you want to update the category: " + cat + "?", "Update category", MessageBoxButtons.YesNo);
+
+                if (confirm == DialogResult.Yes)
+                {
+                    await edit.EditCategory(lb_category, txtBox_edit_category);
+                    lb_category.Items.Clear();
+                    cb_category.Items.Clear();
+                    FillCategoryList();
+                    txtBox_edit_category.Clear();
+                }
+                else
+                {
+                    txtBox_edit_category.Clear();
+                }
+            }
 
         }
 
         private void btn_edit_podcast_name_Click(object sender, EventArgs e)
         {
-            edit.EditPod(lb_category, lb_podcast, txtBox_new_pod);
-            lb_category.Items.Clear();
-            cb_category.Items.Clear();
-            lb_podcast.Items.Clear();
-            clb_episodes.Items.Clear();
-            FillCategoryList();
+
+
+            if (Validation.tfNotEmpty(txtBox_new_pod, "Podcast name ") && Validation.listBoxEmpty(lb_podcast))
+            {
+                var pod = lb_podcast.SelectedItem.ToString();
+                var confirm = MessageBox.Show("Do you want to update " + pod + "?", "Update podcast", MessageBoxButtons.YesNo);
+
+                if (confirm == DialogResult.Yes)
+                {
+
+                    edit.EditPod(lb_category, lb_podcast, txtBox_new_pod);
+                    lb_category.Items.Clear();
+                    cb_category.Items.Clear();
+                    lb_podcast.Items.Clear();
+                    clb_episodes.Items.Clear();
+                    txtBox_new_pod.Clear();
+                    FillCategoryList();
+                }
+            }
+
+
         }
 
 
         private void btn_edit_pod_location_Click(object sender, EventArgs e)
         {
-            edit.EditLocation(lb_category, lb_podcast, cb_category);
-            lb_category.Items.Clear();
-            cb_category.Items.Clear();
-            lb_podcast.Items.Clear();
-            clb_episodes.Items.Clear();
-            FillCategoryList();
+            if (Validation.listBoxEmpty(lb_podcast) && Validation.categoryBoxNotEmpty(cb_category))
+            {
+                var pod = lb_podcast.SelectedItem.ToString();
+                var cat = cb_category.SelectedItem.ToString();
+                var confirm = MessageBox.Show("Do you want to update " + pod + " to the category: " + cat + "?", "Update podcast", MessageBoxButtons.YesNo);
+
+                if (confirm == DialogResult.Yes)
+                {
+                    edit.EditLocation(lb_category, lb_podcast, cb_category);
+
+                    lb_category.Items.Clear();
+                    cb_category.Items.Clear();
+                    lb_podcast.Items.Clear();
+                    clb_episodes.Items.Clear();
+                    FillCategoryList();
+                }
+            }
         }
 
         private void btn_edit_podcast_url_Click(object sender, EventArgs e)
