@@ -105,7 +105,7 @@ namespace Presentation
         {
             try
             {
-                cb_interval.Items.Add("2000");
+                cb_interval.Items.Add("20");
                 cb_interval.Items.Add("5000");
                 cb_interval.Items.Add("10000");
                 cb_interval.Items.Add("300000");
@@ -120,7 +120,7 @@ namespace Presentation
         private void btn_add_podcast_Click(object sender, EventArgs e)
         {
 
-            if (Validation.tfNotEmpty(txtBox_new_pod, "Podcast name ") && Validation.tfNotEmpty(txtBox_url, "URL ") && Validation.categoryBoxNotEmpty(cb_category) && Validation.intervalBoxNotEmpty(cb_interval, lb_podcast))
+            if (Validation.tfNotEmpty(txtBox_new_pod, "Podcast name ") && Validation.tfNotEmpty(txtBox_url, "URL ") && Validation.categoryBoxNotEmpty(cb_category) && Validation.categoryBoxNotEmpty(cb_interval))
             {
                 var podName = txtBox_new_pod.Text;
                 var url = txtBox_url.Text;
@@ -129,6 +129,8 @@ namespace Presentation
 
 
                 pod.PodInfo(podName, url, category, interval);
+
+                MessageBox.Show("Podcast Added");
             }
 
         }
@@ -164,16 +166,22 @@ namespace Presentation
 
                 Process.Start(url);
             }
-            
+
         }
 
         private void clb_episodes_MouseClick_1(object sender, MouseEventArgs e)
         {
-            richtb_description.Clear();
-            var category = lb_category.SelectedItem.ToString();
-            var name = lb_podcast.SelectedItem.ToString();
-            var chosenEp = clb_episodes.SelectedItem.ToString();
-            episode.getDescription(category, name, chosenEp, richtb_description);
+            if(clb_episodes.SelectedItem != null)
+            {
+                richtb_description.Clear();
+                {
+                    var category = lb_category.SelectedItem.ToString();
+                    var name = lb_podcast.SelectedItem.ToString();
+                    var chosenEp = clb_episodes.SelectedItem.ToString();
+                    episode.getDescription(category, name, chosenEp, richtb_description);
+                }
+            }
+            
         }
 
 
@@ -192,8 +200,11 @@ namespace Presentation
 
                         feed.Remove(category, name);
                         lb_podcast.Items.Clear();
+                        clb_episodes.Items.Clear();
 
                         fillPodcastList(lb_category.Text, lb_podcast);
+
+                        MessageBox.Show("Podcast deleted");
                     }
                 }
             }
@@ -275,15 +286,29 @@ namespace Presentation
 
         private void btn_edit_podcast_url_Click(object sender, EventArgs e)
         {
+            if (Validation.tfNotEmpty(txtBox_url, "The URL field ") && Validation.categoryBoxNotEmpty(cb_category) && Validation.intervalBoxNotEmpty(cb_interval) && Validation.listBoxEmpty(lb_category) && Validation.listBoxEmpty(lb_podcast) && Validation.validURL(txtBox_url.Text))
+            {
+
+                var category = lb_category.SelectedItem.ToString();
+                var podName = lb_podcast.SelectedItem.ToString();
+                var url = txtBox_url.Text;
+                var cat = cb_category.SelectedItem.ToString();
+                var interval = cb_interval.SelectedItem.ToString();
 
 
+                feed.Remove(category, podName);
+                pod.PodInfo(podName, url, cat, interval);
 
-            lb_category.Items.Clear();
-            cb_category.Items.Clear();
-            lb_podcast.Items.Clear();
-            clb_episodes.Items.Clear();
-            FillCategoryList();
+                lb_category.Items.Clear();
+                cb_category.Items.Clear();
+                lb_podcast.Items.Clear();
+                clb_episodes.Items.Clear();
+                FillCategoryList();
+            }
+
         }
+
+
 
         private void btn_delete_podcast_Click(object sender, EventArgs e)
         {

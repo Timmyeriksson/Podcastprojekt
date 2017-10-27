@@ -10,8 +10,6 @@ namespace Logic
     public class Validation
     {
 
-
-
         public static bool tfNotEmpty(TextBox field, string label)
         {
             if (field.Text == "")
@@ -62,7 +60,7 @@ namespace Logic
 
         }
 
-        public static bool checkValidURL(string url)
+        public static bool validURL(string url)
         {
             try
             {
@@ -94,17 +92,11 @@ namespace Logic
                 return true;
             }
         }
-        public static bool intervalBoxNotEmpty(ComboBox cb, ListBox list)
+        public static bool intervalBoxNotEmpty(ComboBox cb)
         {
             if (cb.Text == "")
             {
-                MessageBox.Show("Please choose an update interval.");
-                cb.Focus();
-                return false;
-            }
-            else if (cb.SelectedItem == list.SelectedItem)
-            {
-                MessageBox.Show("The chosen update interval is already selected for the podcast");
+                MessageBox.Show("An update interval is required");
                 cb.Focus();
                 return false;
             }
