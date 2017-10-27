@@ -304,6 +304,8 @@ namespace Presentation
                 lb_podcast.Items.Clear();
                 clb_episodes.Items.Clear();
                 FillCategoryList();
+
+                MessageBox.Show("URL updated");
             }
 
         }
