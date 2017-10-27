@@ -16,7 +16,6 @@ namespace Logic
         {
             var category = list.SelectedItem.ToString();
             string categoryName = Directory.GetCurrentDirectory() + @"\" + category;
-
             string newCat = text.Text;
             string newPath = Directory.GetCurrentDirectory() + @"\" + newCat;
 
@@ -24,34 +23,36 @@ namespace Logic
             {
                 Directory.Move(categoryName, newPath);
             });
-               
+
         }
 
         public void EditPod(ListBox cat, ListBox file, TextBox text)
         {
-
+            //Current
             var category = cat.SelectedItem.ToString();
             var fileName = file.SelectedItem.ToString();
             string currentName = Directory.GetCurrentDirectory() + @"\" + category + @"\" + fileName + ".xml";
 
+            //New
             string newName = text.Text;
-            string newPath = Directory.GetCurrentDirectory() + @"\" + category +  @"\" + newName + ".xml";
+            string newPath = Directory.GetCurrentDirectory() + @"\" + category + @"\" + newName + ".xml";
 
             Directory.Move(currentName, newPath);
         }
 
         public void EditLocation(ListBox cat, ListBox pod, ComboBox newCat)
         {
+
+            //Current location
             var category = cat.SelectedItem.ToString();
             var fileName = pod.SelectedItem.ToString();
             string currentName = Directory.GetCurrentDirectory() + @"\" + category + @"\" + fileName + ".xml";
 
-            /* Ny kategori */ var file = newCat.SelectedItem.ToString();
+            // New location
+            var file = newCat.SelectedItem.ToString();
             string newPath = Directory.GetCurrentDirectory() + @"\" + file + @"\" + fileName + ".xml";
 
             Directory.Move(currentName, newPath);
         }
-
-     
     }
 }

@@ -24,10 +24,6 @@ namespace Logic
             }
         }
 
-
-
-
-
         public static bool listBoxEmpty(ListBox box)
         {
 
@@ -41,7 +37,6 @@ namespace Logic
             {
                 return true;
             }
-
         }
 
         public static bool clbEmpty(CheckedListBox box)
@@ -57,7 +52,6 @@ namespace Logic
             {
                 return true;
             }
-
         }
 
         public static bool validURL(string url)
@@ -92,6 +86,7 @@ namespace Logic
                 return true;
             }
         }
+
         public static bool intervalBoxNotEmpty(ComboBox cb)
         {
             if (cb.Text == "")
@@ -105,8 +100,6 @@ namespace Logic
                 return true;
             }
         }
-
-
 
         public static bool delete(ListBox list)
         {

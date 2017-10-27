@@ -31,7 +31,6 @@ namespace Logic
             pod.AddNewPod(name, category, url, interval);
 
         }
-
     }
 }
 

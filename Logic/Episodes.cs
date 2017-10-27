@@ -32,6 +32,7 @@ namespace Logic
                 chlBox.Items.Add(title.InnerText);
             }
         }
+
         public void setPlayed(string category, string name, CheckedListBox chlBox)
         {
             string path = Directory.GetCurrentDirectory() + @"\" + category + @"\" + name + @".xml";
@@ -44,7 +45,6 @@ namespace Logic
             foreach (XmlNode xndNode in xdcDocument.DocumentElement.SelectNodes("item"))
             {
                 var title = xndNode.SelectSingleNode("title");
-
                 var status = xndNode.SelectSingleNode("status");
 
                 if (status.InnerText.Equals("Listened to."))

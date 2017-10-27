@@ -28,8 +28,8 @@ namespace Data
             xmlOut.WriteElementString("interval", interval);
             xmlOut.WriteElementString("url", url);
             xmlOut.WriteElementString("lastSync", DateTime.Now.ToString());
-            foreach (XmlNode item
-               in doc.DocumentElement.SelectNodes("channel/item"))
+
+            foreach (XmlNode item in doc.DocumentElement.SelectNodes("channel/item"))
             {
                 var title = item.SelectSingleNode("title");
                 var description = item.SelectSingleNode("description");
