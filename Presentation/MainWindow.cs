@@ -105,10 +105,10 @@ namespace Presentation
         {
             try
             {
-                cb_interval.Items.Add("20");
-                cb_interval.Items.Add("5000");
-                cb_interval.Items.Add("10000");
-                cb_interval.Items.Add("300000");
+                cb_interval.Items.Add("1");
+                cb_interval.Items.Add("2");
+                cb_interval.Items.Add("3");
+                cb_interval.Items.Add("4");
             }
             catch (Exception e)
             {
@@ -120,17 +120,35 @@ namespace Presentation
         private void btn_add_podcast_Click(object sender, EventArgs e)
         {
 
-            if (Validation.tfNotEmpty(txtBox_new_pod, "Podcast name ") && Validation.tfNotEmpty(txtBox_url, "URL ") && Validation.categoryBoxNotEmpty(cb_category) && Validation.categoryBoxNotEmpty(cb_interval))
+            if (Validation.tfNotEmpty(txtBox_new_pod, "Podcast name ") && Validation.tfNotEmpty(txtBox_url, "URL ") && Validation.categoryBoxNotEmpty(cb_category) && Validation.intervalBoxNotEmpty(cb_interval))
             {
                 var podName = txtBox_new_pod.Text;
                 var url = txtBox_url.Text;
                 var category = cb_category.SelectedItem.ToString();
                 var interval = cb_interval.SelectedItem.ToString();
-
-
-                pod.PodInfo(podName, url, category, interval);
-                MessageBox.Show("Podcast Added");
+                var remadeInterval = 0;
+                if (interval == "1")
+                {
+                    remadeInterval = 20000;
+                    pod.PodInfo(podName, url, category, remadeInterval);
+                }
+                else if (interval == "2")
+                {
+                    remadeInterval = 2 * 60 * 60 * 1000;
+                    pod.PodInfo(podName, url, category, remadeInterval);
+                }
+                else if (interval == "3")
+                {
+                    remadeInterval = 3 * 60 * 60 * 1000;
+                    pod.PodInfo(podName, url, category, remadeInterval);
+                }
+                else if (interval == "4")
+                {
+                    remadeInterval = 4 * 60 * 60 * 1000;
+                    pod.PodInfo(podName, url, category, remadeInterval);
+                }
             }
+
         }
         private void lb_category_MouseClick(object sender, MouseEventArgs e)
         {
@@ -284,10 +302,31 @@ namespace Presentation
                 var url = txtBox_url.Text;
                 var cat = cb_category.SelectedItem.ToString();
                 var interval = cb_interval.SelectedItem.ToString();
-
-
-                feed.Remove(category, podName);
-                pod.PodInfo(podName, url, cat, interval);
+                var remadeInterval = 0;
+                if (interval == "1")
+                {
+                    remadeInterval = 20000;
+                    feed.Remove(category, podName);
+                    pod.PodInfo(podName, url, category, remadeInterval);
+                }
+                else if (interval == "2")
+                {
+                    remadeInterval = 2 * 60 * 60 * 1000;
+                    feed.Remove(category, podName);
+                    pod.PodInfo(podName, url, category, remadeInterval);
+                }
+                else if (interval == "3")
+                {
+                    remadeInterval = 3 * 60 * 60 * 1000;
+                    feed.Remove(category, podName);
+                    pod.PodInfo(podName, url, category, remadeInterval);
+                }
+                else if (interval == "4")
+                {
+                    remadeInterval = 4 * 60 * 60 * 1000;
+                    feed.Remove(category, podName);
+                    pod.PodInfo(podName, url, category, remadeInterval);
+                }
 
                 lb_category.Items.Clear();
                 cb_category.Items.Clear();

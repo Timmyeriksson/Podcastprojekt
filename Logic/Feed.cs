@@ -12,13 +12,25 @@ namespace Logic
         public void Remove(string category)
         {
             string path = Directory.GetCurrentDirectory() + @"\" + category;
+
+            File.SetAttributes(path, FileAttributes.Normal);
             Directory.Delete(path, true);
         }
 
         public void Remove(string category, string namn)
         {
+
             string path = Directory.GetCurrentDirectory() + @"\" + category + @"\" + namn + @".xml";
-            File.Delete(path);
+            System.GC.Collect();
+            System.GC.WaitForPendingFinalizers();
+            if (File.Exists(path) && path != null)
+            {
+
+                File.SetAttributes(path, FileAttributes.Normal);
+
+                File.Delete(path);
+            }
+
         }
     }
 }

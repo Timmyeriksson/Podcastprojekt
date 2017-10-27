@@ -21,14 +21,12 @@ namespace Logic
         public void getEpisodes(string category, string prePath, CheckedListBox chlBox)
         {
             string path = Directory.GetCurrentDirectory() + @"\" + category + @"\" + prePath + @".xml";
-
             XmlDocument xdcDocument = new XmlDocument();
             xdcDocument.Load(path);
 
             foreach (XmlNode xndNode in xdcDocument.DocumentElement.SelectNodes("item"))
             {
                 var title = xndNode.SelectSingleNode("title");
-                var titlestring = title.ToString();
                 chlBox.Items.Add(title.InnerText);
             }
         }
@@ -67,8 +65,17 @@ namespace Logic
                 var title = xndNode.SelectSingleNode("title");
                 if (chosenEp.Equals(title.InnerText))
                 {
+
                     var description = xndNode.SelectSingleNode("description");
-                    textBox.Text = description.InnerText;
+                    if (description != null)
+                    {
+                        textBox.Text = description.InnerText;
+                    }
+                    else
+                    {
+                        textBox.Text = "No description is available.";
+                    }
+
                 }
             }
         }
