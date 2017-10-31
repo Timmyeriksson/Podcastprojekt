@@ -12,11 +12,10 @@ namespace Logic
 {
     public class Edit
     {
-        public Task EditCategory(ListBox list, TextBox text)
+        public Task EditCategory(string category, string newCat)
         {
-            var category = list.SelectedItem.ToString();
+
             string categoryName = Directory.GetCurrentDirectory() + @"\" + category;
-            string newCat = text.Text;
             string newPath = Directory.GetCurrentDirectory() + @"\" + newCat;
 
             return Task.Factory.StartNew(() =>
@@ -26,33 +25,42 @@ namespace Logic
 
         }
 
-        public void EditPod(ListBox cat, ListBox file, TextBox text)
+        public void EditPod(string category, string pod, string newName)
         {
-            //Current
-            var category = cat.SelectedItem.ToString();
-            var fileName = file.SelectedItem.ToString();
-            string currentName = Directory.GetCurrentDirectory() + @"\" + category + @"\" + fileName + ".xml";
+            try
+            {
+                //Current
+                string currentName = Directory.GetCurrentDirectory() + @"\" + category + @"\" + pod + ".xml";
 
-            //New
-            string newName = text.Text;
-            string newPath = Directory.GetCurrentDirectory() + @"\" + category + @"\" + newName + ".xml";
+                //New
+                string newPath = Directory.GetCurrentDirectory() + @"\" + category + @"\" + newName + ".xml";
 
-            Directory.Move(currentName, newPath);
+                Directory.Move(currentName, newPath);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
-        public void EditLocation(ListBox cat, ListBox pod, ComboBox newCat)
+        public void EditLocation(string category, string fileName, string file)
         {
+            try
+            {
+                //Current location
 
-            //Current location
-            var category = cat.SelectedItem.ToString();
-            var fileName = pod.SelectedItem.ToString();
-            string currentName = Directory.GetCurrentDirectory() + @"\" + category + @"\" + fileName + ".xml";
+                string currentName = Directory.GetCurrentDirectory() + @"\" + category + @"\" + fileName + ".xml";
 
-            // New location
-            var file = newCat.SelectedItem.ToString();
-            string newPath = Directory.GetCurrentDirectory() + @"\" + file + @"\" + fileName + ".xml";
+                // New location
 
-            Directory.Move(currentName, newPath);
+                string newPath = Directory.GetCurrentDirectory() + @"\" + file + @"\" + fileName + ".xml";
+
+                Directory.Move(currentName, newPath);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
     }
 }

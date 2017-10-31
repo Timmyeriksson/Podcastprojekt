@@ -5,11 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Logic
+namespace Presentation
 {
-    public class Validation
+    class Validation
     {
-
         public static bool tfNotEmpty(TextBox field, string label)
         {
             if (field.Text == "")

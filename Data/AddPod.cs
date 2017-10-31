@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml;
 
 namespace Data
@@ -12,54 +13,61 @@ namespace Data
     {
         public void AddNewPod(string name, string category, string url, int interval)
         {
-            RssReader rss = new RssReader();
-            XmlDocument doc = rss.ReadRSS(url);
-            string path = Directory.GetCurrentDirectory() + @"\" + category + @"\" + name + @".xml";
-
-            XmlWriterSettings settings = new XmlWriterSettings();
-            settings.Indent = true;
-            settings.IndentChars = ("    ");
-
-            int i = 0;
-
-            XmlWriter xmlOut = XmlWriter.Create(path, settings);
-
-            xmlOut.WriteStartDocument();
-            xmlOut.WriteStartElement("channel");
-            xmlOut.WriteElementString("interval", interval.ToString());
-            xmlOut.WriteElementString("url", url);
-            xmlOut.WriteElementString("lastSync", DateTime.Now.ToString());
-            foreach (XmlNode item
-               in doc.DocumentElement.SelectNodes("channel/item"))
+            try
             {
-                var title = item.SelectSingleNode("title");
-                var description = item.SelectSingleNode("description");
-                var enclosure = item.SelectSingleNode("enclosure/@url");
+                RssReader rss = new RssReader();
+                XmlDocument doc = rss.ReadRSS(url);
+                string path = Directory.GetCurrentDirectory() + @"\" + category + @"\" + name + @".xml";
 
-                xmlOut.WriteStartElement("item");
-                if (description != null)
+                XmlWriterSettings settings = new XmlWriterSettings();
+                settings.Indent = true;
+                settings.IndentChars = ("    ");
+
+                int i = 0;
+
+                XmlWriter xmlOut = XmlWriter.Create(path, settings);
+
+                xmlOut.WriteStartDocument();
+                xmlOut.WriteStartElement("channel");
+                xmlOut.WriteElementString("interval", interval.ToString());
+                xmlOut.WriteElementString("url", url);
+                xmlOut.WriteElementString("lastSync", DateTime.Now.ToString());
+                foreach (XmlNode item
+                   in doc.DocumentElement.SelectNodes("channel/item"))
                 {
-                    if (description.InnerText.Equals(""))
+                    var title = item.SelectSingleNode("title");
+                    var description = item.SelectSingleNode("description");
+                    var enclosure = item.SelectSingleNode("enclosure/@url");
+
+                    xmlOut.WriteStartElement("item");
+                    if (description != null)
                     {
-                        xmlOut.WriteElementString("description", "Unfortunately, no description is available.");
+                        if (description.InnerText.Equals(""))
+                        {
+                            xmlOut.WriteElementString("description", "Unfortunately, no description is available.");
+                        }
+                        else
+                        {
+                            xmlOut.WriteElementString("description", description.InnerText);
+                        }
                     }
-                    else
-                    {
-                        xmlOut.WriteElementString("description", description.InnerText);
-                    }
+
+
+                    xmlOut.WriteElementString("title", title.InnerText);
+                    xmlOut.WriteElementString("enclosure", enclosure.InnerText);
+                    xmlOut.WriteElementString("status", "Unlistened");
+
+                    xmlOut.WriteEndElement();
+                    i++;
                 }
 
-
-                xmlOut.WriteElementString("title", title.InnerText);
-                xmlOut.WriteElementString("enclosure", enclosure.InnerText);
-                xmlOut.WriteElementString("status", "Unlistened");
-
-                xmlOut.WriteEndElement();
-                i++;
+                xmlOut.WriteEndDocument();
+                xmlOut.Close();
             }
-
-            xmlOut.WriteEndDocument();
-            xmlOut.Close();
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
     }
 }

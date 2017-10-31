@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Logic
 {
@@ -11,26 +12,38 @@ namespace Logic
     {
         public void Remove(string category)
         {
-            string path = Directory.GetCurrentDirectory() + @"\" + category;
+            try
+            {
+                string path = Directory.GetCurrentDirectory() + @"\" + category;
 
-            File.SetAttributes(path, FileAttributes.Normal);
-            Directory.Delete(path, true);
+                File.SetAttributes(path, FileAttributes.Normal);
+                Directory.Delete(path, true);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
         public void Remove(string category, string namn)
         {
-
-            string path = Directory.GetCurrentDirectory() + @"\" + category + @"\" + namn + @".xml";
-            System.GC.Collect();
-            System.GC.WaitForPendingFinalizers();
-            if (File.Exists(path) && path != null)
+            try
             {
+                string path = Directory.GetCurrentDirectory() + @"\" + category + @"\" + namn + @".xml";
+                System.GC.Collect();
+                System.GC.WaitForPendingFinalizers();
+                if (File.Exists(path) && path != null)
+                {
 
-                File.SetAttributes(path, FileAttributes.Normal);
+                    File.SetAttributes(path, FileAttributes.Normal);
 
-                File.Delete(path);
+                    File.Delete(path);
+                }
             }
-
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
     }
 }

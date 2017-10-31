@@ -32,30 +32,44 @@ namespace Presentation
 
         private void btn_delete_category_Click(object sender, EventArgs e)
         {
-            if (Validation.delete(lb_category))
+            try
             {
-                var confirm = MessageBox.Show("Do you want to delete the category?", "Delete Category", MessageBoxButtons.YesNo);
-
-                if (confirm == DialogResult.Yes)
+                if (Validation.delete(lb_category))
                 {
-                    var folderToDelete = lb_category.SelectedItem.ToString();
-                    feed.Remove(folderToDelete);
-                    lb_category.Items.Clear();
-                    cb_category.Items.Clear();
-                    FillCategoryList();
+                    var confirm = MessageBox.Show("Do you want to delete the category?", "Delete Category", MessageBoxButtons.YesNo);
+
+                    if (confirm == DialogResult.Yes)
+                    {
+                        var folderToDelete = lb_category.SelectedItem.ToString();
+                        feed.Remove(folderToDelete);
+                        lb_category.Items.Clear();
+                        cb_category.Items.Clear();
+                        FillCategoryList();
+                    }
                 }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
             }
         }
 
         private void btn_add_category_Click(object sender, EventArgs e)
         {
-            if (Validation.tfNotEmpty(txtBox_new_category, "New category "))
+            try
             {
-                lb_category.Items.Clear();
-                cb_category.Items.Clear();
-                var categoryName = txtBox_new_category.Text;
-                cat.NewFolder(categoryName);
-                FillCategoryList();
+                if (Validation.tfNotEmpty(txtBox_new_category, "New category "))
+                {
+                    lb_category.Items.Clear();
+                    cb_category.Items.Clear();
+                    var categoryName = txtBox_new_category.Text;
+                    cat.NewFolder(categoryName);
+                    FillCategoryList();
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
             }
         }
 
@@ -76,7 +90,7 @@ namespace Presentation
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                MessageBox.Show(e.Message);
             }
         }
 
@@ -97,7 +111,7 @@ namespace Presentation
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                MessageBox.Show(e.Message);
             }
         }
 
@@ -112,113 +126,204 @@ namespace Presentation
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                MessageBox.Show(e.Message);
             }
         }
 
 
         private void btn_add_podcast_Click(object sender, EventArgs e)
         {
-
-            if (Validation.tfNotEmpty(txtBox_new_pod, "Podcast name ") && Validation.tfNotEmpty(txtBox_url, "URL ") && Validation.categoryBoxNotEmpty(cb_category) && Validation.intervalBoxNotEmpty(cb_interval))
+            try
             {
-                var podName = txtBox_new_pod.Text;
-                var url = txtBox_url.Text;
-                var category = cb_category.SelectedItem.ToString();
-                var interval = cb_interval.SelectedItem.ToString();
-                var remadeInterval = 0;
-                if (interval == "1")
+                if (Validation.tfNotEmpty(txtBox_new_pod, "Podcast name ") && Validation.tfNotEmpty(txtBox_url, "URL ") && Validation.categoryBoxNotEmpty(cb_category) && Validation.intervalBoxNotEmpty(cb_interval))
                 {
-                    remadeInterval = 20000;
-                    pod.PodInfo(podName, url, category, remadeInterval);
+                    var podName = txtBox_new_pod.Text;
+                    var url = txtBox_url.Text;
+                    var category = cb_category.SelectedItem.ToString();
+                    var interval = cb_interval.SelectedItem.ToString();
+                    var remadeInterval = 0;
+                    if (interval == "1")
+                    {
+                        remadeInterval = 60 * 60 * 1000;
+                        pod.PodInfo(podName, url, category, remadeInterval);
+                    }
+                    else if (interval == "2")
+                    {
+                        remadeInterval = 2 * 60 * 60 * 1000;
+                        pod.PodInfo(podName, url, category, remadeInterval);
+                    }
+                    else if (interval == "3")
+                    {
+                        remadeInterval = 3 * 60 * 60 * 1000;
+                        pod.PodInfo(podName, url, category, remadeInterval);
+                    }
+                    else if (interval == "4")
+                    {
+                        remadeInterval = 4 * 60 * 60 * 1000;
+                        pod.PodInfo(podName, url, category, remadeInterval);
+                    }
                 }
-                else if (interval == "2")
-                {
-                    remadeInterval = 2 * 60 * 60 * 1000;
-                    pod.PodInfo(podName, url, category, remadeInterval);
-                }
-                else if (interval == "3")
-                {
-                    remadeInterval = 3 * 60 * 60 * 1000;
-                    pod.PodInfo(podName, url, category, remadeInterval);
-                }
-                else if (interval == "4")
-                {
-                    remadeInterval = 4 * 60 * 60 * 1000;
-                    pod.PodInfo(podName, url, category, remadeInterval);
-                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
             }
 
         }
         private void lb_category_MouseClick(object sender, MouseEventArgs e)
         {
-            lb_podcast.Items.Clear();
-            clb_episodes.Items.Clear();
-            richtb_description.Clear();
-            fillPodcastList(lb_category.Text, lb_podcast);
+            try
+            {
+                lb_podcast.Items.Clear();
+                clb_episodes.Items.Clear();
+                richtb_description.Clear();
+                fillPodcastList(lb_category.Text, lb_podcast);
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
         }
 
         private void lb_podcast_MouseClick(object sender, MouseEventArgs e)
         {
-
-            if (lb_podcast.SelectedItem != null)
+            try
             {
-                clb_episodes.Items.Clear();
-                richtb_description.Clear();
-                var category = lb_category.SelectedItem.ToString();
-                var prePath = lb_podcast.SelectedItem.ToString();
-                episode.getEpisodes(category, prePath, clb_episodes);
-                episode.setPlayed(category, prePath, clb_episodes);
+                if (lb_podcast.SelectedItem != null)
+                {
+                    clb_episodes.Items.Clear();
+                    richtb_description.Clear();
+                    var category = lb_category.SelectedItem.ToString();
+                    var prePath = lb_podcast.SelectedItem.ToString();
+                    episode.getEpisodes(category, prePath);
+                    var list = episode.getepList();
+                    foreach (var item in list)
+                    {
+                            clb_episodes.Items.Add(item.Title.ToString());
+                    }
+                    SetPlayed();
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
             }
         }
 
         private void btn_play_podcast_Click(object sender, EventArgs e)
         {
-            if (Validation.clbEmpty(clb_episodes))
+            try
             {
-                string url;
-                episode.getPodcastUrl(lb_category.SelectedItem.ToString(), lb_podcast.SelectedItem.ToString(), clb_episodes.SelectedItem.ToString(), out url);
-                episode.setPlayed(lb_category.SelectedItem.ToString(), lb_podcast.SelectedItem.ToString(), clb_episodes);
+                if (Validation.clbEmpty(clb_episodes))
+                {
+                    string url;
+                    episode.getPodcastUrl(lb_category.SelectedItem.ToString(), lb_podcast.SelectedItem.ToString(), clb_episodes.SelectedItem.ToString(), out url);
+                    SetPlayed();
 
-                Process.Start(url);
+                    Process.Start(url);
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+        }
+
+        public void SetPlayed()
+        {
+            try
+            {
+                var category = lb_category.SelectedItem.ToString();
+                var name = lb_podcast.SelectedItem.ToString();
+                string path = Directory.GetCurrentDirectory() + @"\" + category + @"\" + name + @".xml";
+
+                XmlDocument xdcDocument = new XmlDocument();
+                xdcDocument.Load(path);
+
+                int i = 0;
+
+                foreach (XmlNode xndNode in xdcDocument.DocumentElement.SelectNodes("item"))
+                {
+                    var title = xndNode.SelectSingleNode("title");
+                    var status = xndNode.SelectSingleNode("status");
+
+                    if (status.InnerText.Equals("Listened to."))
+                    {
+                        clb_episodes.SetItemChecked(i, true);
+                    }
+                    i++;
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
             }
         }
 
         private void clb_episodes_MouseClick_1(object sender, MouseEventArgs e)
         {
-            if (clb_episodes.SelectedItem != null)
+            try
             {
-                richtb_description.Clear();
+                if (clb_episodes.SelectedItem != null)
                 {
-                    var category = lb_category.SelectedItem.ToString();
-                    var name = lb_podcast.SelectedItem.ToString();
-                    var chosenEp = clb_episodes.SelectedItem.ToString();
-                    episode.getDescription(category, name, chosenEp, richtb_description);
+                    richtb_description.Clear();
+                    {
+                        var category = lb_category.SelectedItem.ToString();
+                        var name = lb_podcast.SelectedItem.ToString();
+                        var chosenEp = clb_episodes.SelectedItem.ToString();
+                        var list = episode.getepList();
+                        foreach (var item in list)
+                        {
+                            if (item.Title == chosenEp)
+                            {
+                                var desci = item.Description;
+                                if (desci != null)
+                                {
+                                    richtb_description.Text = desci;
+                                }
+                                else
+                                {
+                                    richtb_description.Text = "No description is available.";
+                                }
+                            }
+                        }
+                    }
                 }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
             }
         }
 
 
         private void btn_delete_podcast_MouseClick(object sender, MouseEventArgs e)
         {
-            if (Validation.delete(lb_podcast))
+            try
             {
-
-                var confirm = MessageBox.Show("Do you want to delete this podcast?", "Delete Podcast", MessageBoxButtons.YesNo);
-
-                if (confirm == DialogResult.Yes)
+                if (Validation.delete(lb_podcast))
                 {
-                    var category = lb_category.SelectedItem.ToString();
-                    var name = lb_podcast.SelectedItem.ToString();
 
-                    feed.Remove(category, name);
-                    lb_podcast.Items.Clear();
-                    clb_episodes.Items.Clear();
+                    var confirm = MessageBox.Show("Do you want to delete this podcast?", "Delete Podcast", MessageBoxButtons.YesNo);
 
-                    fillPodcastList(lb_category.Text, lb_podcast);
+                    if (confirm == DialogResult.Yes)
+                    {
+                        var category = lb_category.SelectedItem.ToString();
+                        var name = lb_podcast.SelectedItem.ToString();
 
-                    MessageBox.Show("Podcast deleted");
+                        feed.Remove(category, name);
+                        lb_podcast.Items.Clear();
+                        clb_episodes.Items.Clear();
+
+                        fillPodcastList(lb_category.Text, lb_podcast);
+
+                        MessageBox.Show("Podcast deleted");
+                    }
                 }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
             }
         }
 
@@ -233,7 +338,8 @@ namespace Presentation
 
                 if (confirm == DialogResult.Yes)
                 {
-                    await edit.EditCategory(lb_category, txtBox_edit_category);
+                    var pod = txtBox_edit_category.Text;
+                    await edit.EditCategory(cat, pod);
                     lb_category.Items.Clear();
                     cb_category.Items.Clear();
                     FillCategoryList();
@@ -249,93 +355,155 @@ namespace Presentation
 
         private void btn_edit_podcast_name_Click(object sender, EventArgs e)
         {
-
-            if (Validation.tfNotEmpty(txtBox_new_pod, "Podcast name ") && Validation.listBoxEmpty(lb_podcast))
+            try
             {
-                var pod = lb_podcast.SelectedItem.ToString();
-                var confirm = MessageBox.Show("Do you want to update " + pod + "?", "Update podcast", MessageBoxButtons.YesNo);
-
-                if (confirm == DialogResult.Yes)
+                if (Validation.tfNotEmpty(txtBox_new_pod, "Podcast name ") && Validation.listBoxEmpty(lb_podcast))
                 {
+                    var pod = lb_podcast.SelectedItem.ToString();
+                    var confirm = MessageBox.Show("Do you want to update " + pod + "?", "Update podcast", MessageBoxButtons.YesNo);
 
-                    edit.EditPod(lb_category, lb_podcast, txtBox_new_pod);
-                    lb_category.Items.Clear();
-                    cb_category.Items.Clear();
-                    lb_podcast.Items.Clear();
-                    clb_episodes.Items.Clear();
-                    txtBox_new_pod.Clear();
-                    FillCategoryList();
+                    if (confirm == DialogResult.Yes)
+                    {
+                        var cat = lb_category.SelectedItem.ToString();
+                        var newPod = txtBox_new_pod.Text;
+                        edit.EditPod(cat, pod, newPod);
+                        lb_category.Items.Clear();
+                        cb_category.Items.Clear();
+                        lb_podcast.Items.Clear();
+                        clb_episodes.Items.Clear();
+                        txtBox_new_pod.Clear();
+                        FillCategoryList();
+                    }
                 }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
             }
         }
 
 
         private void btn_edit_pod_location_Click(object sender, EventArgs e)
         {
-            if (Validation.listBoxEmpty(lb_podcast) && Validation.categoryBoxNotEmpty(cb_category))
+            try
             {
-                var pod = lb_podcast.SelectedItem.ToString();
-                var cat = cb_category.SelectedItem.ToString();
-                var confirm = MessageBox.Show("Do you want to update " + pod + " to the category: " + cat + "?", "Update podcast", MessageBoxButtons.YesNo);
-
-                if (confirm == DialogResult.Yes)
+                if (Validation.listBoxEmpty(lb_podcast) && Validation.categoryBoxNotEmpty(cb_category))
                 {
-                    edit.EditLocation(lb_category, lb_podcast, cb_category);
+                    var pod = lb_podcast.SelectedItem.ToString();
+                    var cat = cb_category.SelectedItem.ToString();
+                    var oldCat = lb_category.SelectedItem.ToString();
+                    var confirm = MessageBox.Show("Do you want to update " + pod + " to the category: " + cat + "?", "Update podcast", MessageBoxButtons.YesNo);
+
+                    if (confirm == DialogResult.Yes)
+                    {
+                        edit.EditLocation(oldCat, pod, cat);
+
+                        lb_category.Items.Clear();
+                        cb_category.Items.Clear();
+                        lb_podcast.Items.Clear();
+                        clb_episodes.Items.Clear();
+                        FillCategoryList();
+                    }
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+        }
+
+        private void btn_edit_podcast_url_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Validation.tfNotEmpty(txtBox_url, "The URL field ") && Validation.categoryBoxNotEmpty(cb_category) && Validation.intervalBoxNotEmpty(cb_interval)
+                    && Validation.listBoxEmpty(lb_category) && Validation.listBoxEmpty(lb_podcast) && Validation.validURL(txtBox_url.Text))
+                {
+
+                    var category = lb_category.SelectedItem.ToString();
+                    var podName = lb_podcast.SelectedItem.ToString();
+                    var url = txtBox_url.Text;
+                    var cat = cb_category.SelectedItem.ToString();
+                    var interval = cb_interval.SelectedItem.ToString();
+                    var remadeInterval = 0;
+                    if (interval == "1")
+                    {
+                        remadeInterval = 60 * 60 * 1000;
+                        feed.Remove(category, podName);
+                        pod.PodInfo(podName, url, category, remadeInterval);
+                    }
+                    else if (interval == "2")
+                    {
+                        remadeInterval = 2 * 60 * 60 * 1000;
+                        feed.Remove(category, podName);
+                        pod.PodInfo(podName, url, category, remadeInterval);
+                    }
+                    else if (interval == "3")
+                    {
+                        remadeInterval = 3 * 60 * 60 * 1000;
+                        feed.Remove(category, podName);
+                        pod.PodInfo(podName, url, category, remadeInterval);
+                    }
+                    else if (interval == "4")
+                    {
+                        remadeInterval = 4 * 60 * 60 * 1000;
+                        feed.Remove(category, podName);
+                        pod.PodInfo(podName, url, category, remadeInterval);
+                    }
 
                     lb_category.Items.Clear();
                     cb_category.Items.Clear();
                     lb_podcast.Items.Clear();
                     clb_episodes.Items.Clear();
                     FillCategoryList();
+
+                    MessageBox.Show("URL updated");
                 }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
             }
         }
 
-        private void btn_edit_podcast_url_Click(object sender, EventArgs e)
+        private void btn_update_interval_Click(object sender, EventArgs e)
         {
-            if (Validation.tfNotEmpty(txtBox_url, "The URL field ") && Validation.categoryBoxNotEmpty(cb_category) && Validation.intervalBoxNotEmpty(cb_interval)
-                && Validation.listBoxEmpty(lb_category) && Validation.listBoxEmpty(lb_podcast) && Validation.validURL(txtBox_url.Text))
+            try
             {
-
-                var category = lb_category.SelectedItem.ToString();
-                var podName = lb_podcast.SelectedItem.ToString();
-                var url = txtBox_url.Text;
-                var cat = cb_category.SelectedItem.ToString();
-                var interval = cb_interval.SelectedItem.ToString();
-                var remadeInterval = 0;
-                if (interval == "1")
+                if (Validation.listBoxEmpty(lb_podcast) && Validation.intervalBoxNotEmpty(cb_interval))
                 {
-                    remadeInterval = 20000;
-                    feed.Remove(category, podName);
-                    pod.PodInfo(podName, url, category, remadeInterval);
+                    var catt = lb_category.SelectedItem.ToString();
+                    var podd = lb_podcast.SelectedItem.ToString();
+                    var interval = cb_interval.SelectedItem.ToString();
+                    var remadeInterval = 0;
+                    if (interval == "1")
+                    {
+                        remadeInterval = 60 * 60 * 1000;
+                        pod.UpdateInterval(catt, podd, remadeInterval);
+                    }
+                    else if (interval == "2")
+                    {
+                        remadeInterval = 2 * 60 * 60 * 1000;
+                        pod.UpdateInterval(catt, podd, remadeInterval);
+                    }
+                    else if (interval == "3")
+                    {
+                        remadeInterval = 3 * 60 * 60 * 1000;
+                        pod.UpdateInterval(catt, podd, remadeInterval);
+                    }
+                    else if (interval == "4")
+                    {
+                        remadeInterval = 4 * 60 * 60 * 1000;
+                        pod.UpdateInterval(catt, podd, remadeInterval);
+                    }
+                    MessageBox.Show("Interval updated");
                 }
-                else if (interval == "2")
-                {
-                    remadeInterval = 2 * 60 * 60 * 1000;
-                    feed.Remove(category, podName);
-                    pod.PodInfo(podName, url, category, remadeInterval);
-                }
-                else if (interval == "3")
-                {
-                    remadeInterval = 3 * 60 * 60 * 1000;
-                    feed.Remove(category, podName);
-                    pod.PodInfo(podName, url, category, remadeInterval);
-                }
-                else if (interval == "4")
-                {
-                    remadeInterval = 4 * 60 * 60 * 1000;
-                    feed.Remove(category, podName);
-                    pod.PodInfo(podName, url, category, remadeInterval);
-                }
-
-                lb_category.Items.Clear();
-                cb_category.Items.Clear();
-                lb_podcast.Items.Clear();
-                clb_episodes.Items.Clear();
-                FillCategoryList();
-
-                MessageBox.Show("URL updated");
             }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+
         }
     }
 }

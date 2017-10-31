@@ -16,72 +16,52 @@ namespace Logic
     {
         Episode eps = new Episode();
         Podcast pods = new Podcast();
-        List<Episode> episodes = new List<Episode>();
+        List<Episodes> episodes = new List<Episodes>();
+        public string Title { get; set; }
+        public string Url { get; set; }
+        public string Description { get; set; }
 
-        public void getEpisodes(string category, string prePath, CheckedListBox chlBox)
+        public void getEpisodes(string category, string prePath)
         {
-            string path = Directory.GetCurrentDirectory() + @"\" + category + @"\" + prePath + @".xml";
-            XmlDocument xdcDocument = new XmlDocument();
-            xdcDocument.Load(path);
-
-            foreach (XmlNode xndNode in xdcDocument.DocumentElement.SelectNodes("item"))
+            try
             {
-                var title = xndNode.SelectSingleNode("title");
-                chlBox.Items.Add(title.InnerText);
-            }
-        }
-
-        public void setPlayed(string category, string name, CheckedListBox chlBox)
-        {
-            string path = Directory.GetCurrentDirectory() + @"\" + category + @"\" + name + @".xml";
-
-            XmlDocument xdcDocument = new XmlDocument();
-            xdcDocument.Load(path);
-
-            int i = 0;
-
-            foreach (XmlNode xndNode in xdcDocument.DocumentElement.SelectNodes("item"))
-            {
-                var title = xndNode.SelectSingleNode("title");
-                var status = xndNode.SelectSingleNode("status");
-
-                if (status.InnerText.Equals("Listened to."))
+                string path = Directory.GetCurrentDirectory() + @"\" + category + @"\" + prePath + @".xml";
+                XmlDocument xdcDocument = new XmlDocument();
+                xdcDocument.Load(path);
+                if (episodes != null)
                 {
-                    chlBox.SetItemChecked(i, true);
-                }
-                i++;
-            }
-        }
-
-        public void getDescription(string category, string name, string chosenEp, RichTextBox textBox)
-        {
-            string path = Directory.GetCurrentDirectory() + @"\" + category + @"\" + name + @".xml";
-
-            XmlDocument xdcDocument = new XmlDocument();
-            xdcDocument.Load(path);
-
-            foreach (XmlNode xndNode in xdcDocument.DocumentElement.SelectNodes("item"))
-            {
-                var title = xndNode.SelectSingleNode("title");
-                if (chosenEp.Equals(title.InnerText))
-                {
-
-                    var description = xndNode.SelectSingleNode("description");
-                    if (description != null)
+                    episodes.Clear();
+                    foreach (XmlNode xndNode in xdcDocument.DocumentElement.SelectNodes("item"))
                     {
-                        textBox.Text = description.InnerText;
-                    }
-                    else
-                    {
-                        textBox.Text = "No description is available.";
-                    }
+                        var title = xndNode.SelectSingleNode("title");
+                        var description = xndNode.SelectSingleNode("description");
+                        var eppis = new Episodes()
+                        {
+                            Title = title.InnerText,
+                            Description = description.InnerText,
 
+                        };
+                        episodes.Add(eppis);
+                    }
                 }
             }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
+
+
+        public List<Episodes> getepList()
+        {
+
+            return episodes;
+        }
+
 
         public void getPodcastUrl(string category, string namn, string selectedPod, out string url)
         {
+
             XmlDocument xml = new XmlDocument();
 
             string[] minArray = selectedPod.Split('(');

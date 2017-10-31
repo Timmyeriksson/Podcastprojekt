@@ -24,9 +24,8 @@ namespace Data
             XmlDocument dom = new XmlDocument();
             dom.LoadXml(xml);
             return dom;
-
         }
-
 
     }
 }
+
